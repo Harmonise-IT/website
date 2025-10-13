@@ -46,7 +46,7 @@ const ITEMS: Item[] = [
     { title: 'Cloudarchitectuur', body: 'Pragmatische patronen op AWS/Azure met duidelijke kostenbeheersing.', Icon: Cloud },
     { title: 'Automatisering', body: 'Elimineer handmatig werk met scripts, IaC en slimme workflows.', Icon: Spark },
     { title: 'Inzichten', body: 'Datamodellering en dashboards die teams écht gebruiken.', Icon: Chart },
-    { title: 'Partnerschap', body: 'Wij stemmen technologie af op uw organisatieritme.', Icon: Handshake },
+    { title: 'Partnerschap', body: 'Wij stemmen technologie af op uw organisatie.', Icon: Handshake },
 ]
 
 export default function Features() {
@@ -67,7 +67,7 @@ export default function Features() {
     return (
         <section ref={sectionRef} className="section" aria-label="Features">
             <div className="container">
-                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Onze Missie</h2>
+                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Grip op IT</h2>
 
                 <div className={s.grid}>
                     {ITEMS.map(({ title, body, Icon }, idx) => (
