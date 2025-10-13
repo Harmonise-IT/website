@@ -1,0 +1,165 @@
+/* components/Hero.module.scss */
+
+@use '@/app/styles/breakpoints' as *;
+
+.hero {
+  position: relative;
+  min-height: 100svh; /* full screen on mobile too */
+  display: grid;
+  align-items: center;
+  overflow: clip;
+  color: #fff;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px; /* overlap next section by 1px */
+  height: 22vh;                     /* tweak to taste */
+  pointer-events: none;
+  background: linear-gradient(
+                  to bottom,
+                  rgba(0,0,0,0) 0%,
+                  rgba(0,0,0,0.4) 40%,
+                  rgba(0,0,0,0.7) 70%,
+                  #000 100%
+  );
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.video.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* Soft overlay to improve text legibility */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+          radial-gradient(1200px 600px at 70% 10%, rgba(0,0,0,0.15), transparent 60%),
+          linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .video { display: none; }
+  .vignette { background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.7)); }
+}
+
+/* Foreground */
+.content {
+  max-width: 900px;
+  padding: 96px 0;
+}
+/* default: keep in one line */
+.breakMobile { display: inline; }
+
+@include respond-to(mobile) {
+  .title { white-space: normal; }
+  .breakMobile { display: block; }
+}
+
+.title {
+  font-size: clamp(40px, 7.2vw, 80px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  white-space: nowrap;
+  min-height: 1.1em;
+  will-change: transform;
+}
+
+.ctas { display: flex; gap: 12px; }
+
+.primary {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.primary:hover { opacity: .9; }
+
+/* Rotating word styles */
+.rotator {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* Stable rotator: prevents width changes when words swap */
+.rotatorStable {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.rotatorSizer {
+  grid-area: 1 / 1;
+  visibility: hidden;   /* takes space but not visible */
+  white-space: nowrap;
+}
+
+.wordNow {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  transition:
+          opacity .35s ease,
+          transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+/* reuse your existing motion classes */
+.wordIn  { opacity: 1; transform: translateY(0); }
+.wordOut { opacity: 0; transform: translateY(8px); }
+
+
+.word {
+  display: inline-block;
+  will-change: transform, opacity;
+  transition:
+          opacity .35s ease,
+          transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+.wordIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wordOut {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* hidden text measurer */
+.measure {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  left: 0; top: 0;
+}
+

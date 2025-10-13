@@ -1,0 +1,17 @@
+/* app/styles/_breakpoints.scss */
+
+/* --- breakpoint variables --- */
+$bp-mobile: 640px;
+$bp-tablet: 960px;
+$bp-desktop: 1280px;
+
+/* --- helper mixin --- */
+@mixin respond-to($device) {
+  @if $device == mobile {
+    @media (max-width: $bp-mobile) { @content; }
+  } @else if $device == tablet {
+    @media (max-width: $bp-tablet) { @content; }
+  } @else if $device == desktop {
+    @media (max-width: $bp-desktop) { @content; }
+  }
+}

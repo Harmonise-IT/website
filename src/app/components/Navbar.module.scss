@@ -1,0 +1,198 @@
+/* components/Navbar.module.scss */
+
+$black: #000;
+$white: #fff;
+$ink: #0b1020;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 72px;
+  z-index: 60;
+  background: transparent;
+  transition: background-color .25s ease, box-shadow .25s ease;
+  will-change: background-color;
+}
+
+.isHovering {
+  background: $black;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.heroLogo { margin-right: 12px; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  color: $white;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  position: relative;
+}
+
+/* NEW: actions container so Contact + burger align properly */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkWrap { position: relative; }
+
+.linkItem {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font: inherit;
+  transition: background-color .2s ease, color .2s ease;
+}
+.linkItem:hover,
+.active .linkItem {
+  background: $black;
+  color: $white;
+}
+.chev { font-size: 12px; opacity: .85; }
+
+.textLink {
+  color: $white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background-color .2s ease;
+}
+.textLink:hover { background: rgba(255,255,255,.08); }
+
+/* CTA */
+.cta {
+  background: $white;
+  color: $ink;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity .2s ease;
+}
+.cta:hover { opacity: .9; }
+
+/* ---------- Dropdown panel (desktop) ---------- */
+.menuPanel {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 12px) scale(.98);
+  top: calc(100% + 6px);
+  width: min(1100px, 92vw);
+  background: rgba(10,10,10,.92);
+  color: $white;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.03) inset;
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .22s cubic-bezier(.22,1,.36,1), visibility 0s linear .22s;
+  &::before {
+    content: ""; position: absolute; top: -14px; left: 0; right: 0; height: 14px;
+  }
+}
+.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+  pointer-events: auto;
+  transition: opacity .18s ease, transform .3s cubic-bezier(.22,1,.36,1), visibility 0s linear 0s;
+}
+
+/* menu layout */
+.menuGrid { display: grid; grid-template-columns: 1fr 1fr 1fr 320px; gap: 24px; }
+@media (max-width: 960px) {
+  .menuGrid { grid-template-columns: 1fr 1fr; }
+}
+
+.col {}
+.colTitle {
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-bottom: 10px;
+}
+.colList a {
+  display: block; padding: 10px 12px; border-radius: 10px; color: $white; text-decoration: none;
+  transition: background-color .15s ease;
+}
+.colList a:hover { background: rgba(255,255,255,.06); }
+
+/* Aside card */
+.aside { background: rgba(255,255,255,.06); border-radius: 12px; padding: 16px; }
+.asideTitle { font-weight: 700; margin-bottom: 6px; }
+.asideBlurb { opacity: .8; margin: 0 0 10px; }
+.asideCta {
+  display: inline-block; background: $white; color: $ink; padding: 8px 12px; border-radius: 10px; text-decoration: none; font-weight: 700;
+}
+
+/* ----------- MOBILE ADDITIONS ----------- */
+
+/* NEW: hamburger (hidden on desktop) */
+.burger {
+  display: none;
+  width: 40px; height: 40px;
+  border-radius: 10px; border: 0;
+  background: rgba(255,255,255,.1);
+  cursor: pointer;
+}
+.burger span { display:block; height:2px; margin:6px 9px; background:#fff; border-radius:2px; }
+
+/* NEW: mobile slide-down panel */
+.panel {
+  position: fixed; inset: 72px 0 0 0;
+  background: rgba(0,0,0,.92);
+  color: $white;
+  transform: translateY(-8px);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .18s ease, transform .24s cubic-bezier(.22,1,.36,1), visibility 0s linear .24s;
+  backdrop-filter: blur(6px);
+  z-index: 59; /* below header but above content */
+}
+.panelOpen {
+  transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto;
+  transition: opacity .18s ease, transform .28s cubic-bezier(.22,1,.36,1), visibility 0s;
+}
+.panelList {
+  list-style: none; margin: 0; padding: 16px 0 28px;
+  display: grid; gap: 6px;
+}
+.panelTitle { color: rgba(255,255,255,.6); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; padding: 6px 2px; }
+.panelList a {
+  display:block; text-decoration:none; color:$white; padding:14px; border-radius:12px;
+  &:hover { background: rgba(255,255,255,.06); }
+}
+.panelCta a { background: $white; color: $ink; font-weight: 700; }
+
+/* Hide desktop links & CTA, show burger on small screens */
+@media (max-width: 960px) {
+  .links { display: none; }
+  .cta   { display: none; }
+  .burger{ display: inline-block; }
+}
