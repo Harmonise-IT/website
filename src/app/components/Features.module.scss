@@ -1,0 +1,104 @@
+/* components/Features.module.scss */
+
+.title {
+  font-size: clamp(28px, 5.2vw, 54px);
+  line-height: 1.05;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 28px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1);
+}
+.in.title, .title.in { opacity: 1; transform: translateY(0); } /* in case of class order */
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Card: matte black, hairline white outline */
+.card {
+  position: relative;
+  background: #000;
+  border: 1px solid rgba(255,255,255,.14);   /* very thin white outline */
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 148px;
+  transition:
+          transform .35s cubic-bezier(.22,1,.36,1),
+          border-color .25s ease,
+          box-shadow .35s cubic-bezier(.22,1,.36,1),
+          background .25s ease,
+          opacity .6s ease,
+          translate .35s cubic-bezier(.22,1,.36,1);
+  opacity: 0;
+  translate: 0 8px;
+  overflow: hidden;
+}
+
+/* subtle sheen on hover */
+.card::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,.06), rgba(255,255,255,0) 40%);
+  opacity: 0; pointer-events: none;
+  transform: translateX(-20%);
+  transition: opacity .25s ease, transform .40s ease;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,.5);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,.5);
+}
+.card:hover::after {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* reveal when section becomes visible */
+.in.card, .card.in {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.iconWrap {
+  width: 44px; height: 44px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 12px;
+  display: grid; place-items: center;
+  margin-bottom: 14px;
+  background: transparent;     /* no fill */
+  color: #00feff;              /* applies to SVG stroke when using currentColor */
+}
+
+.icon { color: #fff; opacity: .9; }
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.cardBody {
+  margin: 0;
+  opacity: .85;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Reduced motion — keep the style but disable motion */
+@media (prefers-reduced-motion: reduce) {
+  .title, .card { transition: none; opacity: 1; translate: 0; }
+  .card:hover { transform: none; }
+}

@@ -1,0 +1,196 @@
+.section {
+  padding: 84px 0 120px;
+  background: #000;
+  color: #fff;
+
+  /* subtle dotted field (same vibe as your app) */
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* ---------------- BIG CARD ---------------- */
+.bigCard {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  padding: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 18px;
+
+  /* enter animation */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+.in.bigCard, .bigCard.in { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 980px) {
+  .bigCard { grid-template-columns: 1fr; }
+}
+
+/* ---------------- INNER CARDS ---------------- */
+.innerCard {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 14px;
+  background: #0b0f14;
+  padding: 24px;
+  position: relative;
+}
+
+/* form area takes more space on desktop */
+.formCard { min-height: 300px; }
+
+.infoCard { background: rgba(255,255,255,.05); }
+
+/* ---------------- FORM ---------------- */
+.lead {
+  font-size: clamp(20px, 3.2vw, 22px);
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+.form { display: grid; gap: 18px; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field { display: grid; gap: 8px; }
+
+.field label {
+  font-size: 14px;
+  opacity: .82;
+}
+
+.field input,
+.field textarea {
+  appearance: none;
+  border: 0;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.field textarea {
+  border: 1px solid rgba(255,255,255,.18);
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.02);
+}
+
+.field input:focus { border-bottom-color: rgba(255,255,255,.45); }
+.field textarea:focus { border-color: rgba(255,255,255,.45); }
+
+/* actions: keep button NOT full width */
+.actions {
+  margin-top: 6px;
+}
+
+/* compact button */
+.submit {
+  display: inline-flex;            /* not full width */
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: #0b1020;
+  background: #fff;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(.22,1,.36,1), opacity .2s ease, box-shadow .25s ease;
+}
+.submit:hover { transform: translateX(2px); box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+.submit:disabled { transform: translateX(0px); opacity: .6; cursor: default; }
+
+/* ---------------- INFO ---------------- */
+.pitch {
+  margin: 0 0 22px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.meta { margin: 0; }
+.meta dt {
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin: 18px 0 6px;
+}
+.meta dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.meta a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: .92;
+}
+.meta a:hover { opacity: 1; }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bigCard { transition: none; opacity: 1; transform: none; }
+  .submit { transition: none; }
+}
+
+/* BUTTON STATES */
+.submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: #0b1020;
+  background: #fff;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  transition:
+          transform 0.25s cubic-bezier(.22,1,.36,1),
+          opacity 0.2s ease,
+          background 0.3s ease;
+  position: relative;
+}
+
+.submit:hover:not(:disabled) { transform: translateX(2px); }
+.submit:disabled { cursor: default; }
+
+.loading { opacity: 0.6; pointer-events: none; }
+
+.success {
+  background: #76c93b;
+  justify-content: center;
+  cursor: default;
+}
+
+/* Checkmark animation */
+.check {
+  width: 22px;
+  height: 22px;
+  stroke: #0b1020;
+  stroke-dasharray: 36;
+  stroke-dashoffset: 36;
+  animation: drawCheck 0.8s ease forwards;
+}
+
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
+}
+

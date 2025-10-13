@@ -6,8 +6,9 @@ import styles from './Hero.module.scss'
 import RotatingWords from './RotatingWords'
 
 const VIDEOS = [
-    { srcWebm: '/hero-video.webm', srcMp4: '/hero-video.mp4', poster: '/hero-image.webp' },
-    { srcWebm: '/hero-video-2.webm', srcMp4: '/hero-video-2.mp4', poster: '/hero-image-2.png' },
+    { srcWebm: '/hero/hero-video-2.webm', srcMp4: '/hero/hero-video-2.mp4', poster: '/hero/hero-image-2.png' },
+    { srcWebm: '/hero/hero-video-1.webm', srcMp4: '/hero/hero-video-1.mp4', poster: '/hero/hero-image-1.png' },
+    { srcWebm: '/hero/hero-video-3.webm', srcMp4: '/hero/hero-video-3.mp4', poster: '/hero/hero-image-3.png' },
 ]
 
 export default function Hero() {
@@ -19,32 +20,68 @@ export default function Hero() {
         const active = videoRefs.current[activeIndex]
         if (!active) return
 
-        // Pause + reset all other videos
-        videoRefs.current.forEach((v, i) => {
-            if (!v || i === activeIndex) return
-            try {
-                v.pause()
-                v.currentTime = 0 // only reset *non-active* videos
-            } catch {}
-        })
+        const CROSSFADE_LEAD = 0.55; // seconds before end to start crossfade
+        let preFaded = false
 
-        const handleEnded = () => setActiveIndex((n) => (n + 1) % VIDEOS.length)
-        active.loop = false
-        active.addEventListener('ended', handleEnded)
+        // Start crossfade slightly before the end
+        const onTimeUpdate = () => {
+            if (preFaded) return
+            const dur = active.duration
+            if (!isFinite(dur) || dur === 0) return
+            if (active.currentTime >= dur - CROSSFADE_LEAD) {
+                preFaded = true
 
-        // Let browser autoplay; do NOT reset currentTime or call load() here
-        if (active.paused) {
-            active.play().catch(() => {}) // allow Chrome autoplay
+                const nextIdx = (activeIndex + 1) % VIDEOS.length
+                const nextVid = videoRefs.current[nextIdx]
+
+                if (nextVid) {
+                    // Ensure next video is ready & at start
+                    try { if (nextVid.readyState < 2) nextVid.load() } catch {}
+                    try { nextVid.currentTime = 0 } catch {}
+
+                    // Start playing next video behind the scenes
+                    nextVid.play().catch(() => {})
+
+                    // Fade out current, fade in next (slight rAF to guarantee first frame is rendered)
+                    active.classList.add(styles.fadeOut)
+                    requestAnimationFrame(() => { nextVid.classList.add(styles.active) })
+
+                    // Clean up fadeOut class after CSS transition ends
+                    setTimeout(() => { active.classList.remove(styles.fadeOut) }, 1000) // match CSS duration
+                }
+            }
         }
 
-        const prev = videoRefs.current[prevIndexRef.current]
-        if (prev && prev !== active) prev.removeEventListener('ended', handleEnded)
-        prevIndexRef.current = activeIndex
+        // Fallback: if we still reach the end, advance index (state update)
+        const handleEnded = () => setActiveIndex((n) => (n + 1) % VIDEOS.length)
+
+        // Preload the next video early
+        const nextIndex = (activeIndex + 1) % VIDEOS.length
+        const nextVideo = videoRefs.current[nextIndex]
+        if (nextVideo && nextVideo.readyState === 0) {
+            try { nextVideo.load() } catch {}
+        }
+
+        // Keep others reset (except the active one)
+        videoRefs.current.forEach((v, i) => {
+            if (!v || i === activeIndex) return
+            try { v.pause(); v.currentTime = 0 } catch {}
+        })
+
+        active.loop = false
+        active.addEventListener('timeupdate', onTimeUpdate)
+        active.addEventListener('ended', handleEnded)
+
+        if (active.paused) {
+            active.play().catch(() => {})
+        }
 
         return () => {
+            active.removeEventListener('timeupdate', onTimeUpdate)
             active.removeEventListener('ended', handleEnded)
         }
     }, [activeIndex])
+
 
 
     return (
@@ -53,7 +90,9 @@ export default function Hero() {
                 {VIDEOS.map((video, idx) => (
                     <video
                         key={idx}
-                        ref={(el) => (videoRefs.current[idx] = el)}
+                        ref={(el) => {
+                            videoRefs.current[idx] = el;
+                        }}
                         className={`${styles.video} ${idx === activeIndex ? styles.active : ''}`}
                         autoPlay
                         muted
@@ -62,7 +101,6 @@ export default function Hero() {
                     >
                         <source src={video.srcWebm} type="video/webm" />
                         <source src={video.srcMp4} type="video/mp4" />
-                        {/* Poster fallback for very old browsers */}
                         <Image src={video.poster} alt="" fill priority style={{ objectFit: 'cover' }} />
                     </video>
                 ))}
@@ -75,8 +113,8 @@ export default function Hero() {
                         Harmonise{' '}
                         <span className={styles.breakMobile}>
               <RotatingWords
-                  words={['IT', 'Municipalities', 'Companies', 'Government', 'Life']}
-                  intervalMs={2400}
+                  words={['IT', 'Strategy', 'Applications', 'Governance', 'Data']}
+                  intervalMs={2200}
               />
             </span>
                     </h1>

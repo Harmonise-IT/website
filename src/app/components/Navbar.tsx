@@ -57,9 +57,9 @@ export default function Navbar() {
                     <Link href="/" className={styles.brand}>
                         <Image
                             className={styles.heroLogo}
-                            src="/hit-logo-transparent.png"
-                            width={36}
-                            height={36}
+                            src="/hit-logo-blue-transparent.png"
+                            width={64}
+                            height={64}
                             alt="Harmonise IT logo"
                         />
                         Harmonise IT
@@ -136,19 +136,19 @@ function ProductsMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="Strategie en advies">
-                <a href="/services#web">Quick scan</a>
-                <a href="/services#templates">Samen op weg</a>
-                <a href="/services#templates">Procesregie</a>
+                <a href="/strategie-en-advies#quick-scan">Quick scan</a>
+                <a href="/strategie-en-advies#samen-op-weg">Samen op weg</a>
+                <a href="/strategie-en-advies#procesregie">Procesregie</a>
             </Column>
             <Column title="Tech">
-                <a href="/services#cloud">Software op maat</a>
-                <a href="/services#data">Oplossingen</a>
-                <a href="/services#analytics">Software risk assessment</a>
+                <a href="/tech#software-op-maat">Software op maat</a>
+                <a href="/tech#oplossingen">Oplossingen</a>
+                <a href="/tech#software-risk-assessment">Software risk assessment</a>
             </Column>
             <Column title="Ondersteuning">
-                <a href="/services#delivery">On site</a>
-                <a href="/services#advisory">Platform migratie</a>
-                <a href="/services#cloud">Cloud</a>
+                <a href="/ondersteuning#on-site">On site</a>
+                <a href="/ondersteuning#platform-migratie">Platform migratie</a>
+                <a href="/ondersteuning#cloud">Cloud</a>
             </Column>
             <Aside
                 title="Voor gemeenten in 2026"
@@ -163,13 +163,13 @@ function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="Onze missie">
-                <a href="/resources/guides">Onze waarden</a>
-                <a href="/resources/checklists">Uitgangspunten</a>
-                <a href="/resources/case-studies">Waarom Harmonise IT</a>
+                <a href="/onze-missie#onze-waarden">Onze waarden</a>
+                <a href="/onze-missie#uitgangspunten">Uitgangspunten</a>
+                <a href="/onze-missie#waarom-harmonise-it">Waarom Harmonise IT</a>
             </Column>
             <Column title="Bedrijf">
-                <a href="/about">Het team</a>
-                <a href="/privacy">Privacy statement</a>
+                <a href="/bedrijf#het-team">Het team</a>
+                <a href="/bedrijf#privacy-statement">Privacy statement</a>
                 <a href="/contact">Contact</a>
             </Column>
             <Aside

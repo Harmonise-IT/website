@@ -53,6 +53,12 @@ body {
   max-width: var(--container);
 }
 
+.section {
+  background: #000;
+  color: #fff;
+  padding: 72px 0 96px;
+}
+
 @media (max-width: 760px) {
   :root { --pad: var(--pad-sm); }
 }
