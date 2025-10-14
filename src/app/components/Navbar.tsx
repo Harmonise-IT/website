@@ -12,6 +12,13 @@ const links = [
     { key: 'wie-wij-zijn' as const, label: 'Wie wij zijn', menu: true },
 ]
 
+const mobileLinks = [
+    { key: 'mobile-strategie' as const, label: 'Strategie', href: '/strategie-en-advies#strategie' },
+    { key: 'mobile-inrichting' as const, label: 'Inrichting', href: '/strategie-en-advies#inrichting' },
+    { key: 'mobile-software-op-maat' as const, label: 'Software op maat', href: '/tech#software-op-maat' },
+    { key: 'mobile-oplossingen', label: 'Oplossingen', href: '/tech#oplossingen' },
+]
+
 export default function Navbar() {
     const [hovering, setHovering] = useState(false)      // desktop hover
     const [open, setOpen] = useState<MenuKey>(null)      // desktop dropdown
@@ -130,11 +137,14 @@ export default function Navbar() {
                 <div className="container">
                     <ul className={styles.panelList}>
                         <li className={styles.panelTitle}>Navigatie</li>
-                        {links.map(l => (
+                        {mobileLinks.map(l => (
                             <li key={l.key}>
-                                {/* Top-level categories in mobile; close panel on click */}
-                                <Link href="#" onClick={() => setMobileOpen(false)}>{l.label}</Link>
+                                <Link href={l.href} onClick={() => setMobileOpen(false)}>{l.label}</Link>
                             </li>
+                            // <li key={l.key}>
+                            //     {/* Top-level categories in mobile; close panel on click */}
+                            //     <Link href="#" onClick={() => setMobileOpen(false)}>{l.label}</Link>
+                            // </li>
                         ))}
                         <li className={styles.panelCta}>
                             <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>

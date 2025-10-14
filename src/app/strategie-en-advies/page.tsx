@@ -25,7 +25,7 @@ export default function StrategieEnAdviesPage() {
                     media={{
                         kind: 'video',
                         src: '/software-op-maat.mp4',
-                        poster: '/software-op-maat.jpg',
+                        poster: '/hit-logo-blue-transparent.png',
                         loop: true,
                         muted: true,
                         playsInline: true,
@@ -53,7 +53,7 @@ export default function StrategieEnAdviesPage() {
                     media={{
                         kind: 'video',
                         src: '/software-op-maat.mp4',
-                        poster: '/software-op-maat.jpg',
+                        poster: '/hit-logo-blue-transparent.png',
                         loop: true,
                         muted: true,
                         playsInline: true,
@@ -80,7 +80,7 @@ export default function StrategieEnAdviesPage() {
                 {/*    media={{*/}
                 {/*        kind: 'video',*/}
                 {/*        src: '/software-op-maat.mp4',*/}
-                {/*        poster: '/software-op-maat.jpg',*/}
+                {/*        poster: '/hit-logo-blue-transparent.png',*/}
                 {/*        loop: true,*/}
                 {/*        muted: true,*/}
                 {/*        playsInline: true,*/}
