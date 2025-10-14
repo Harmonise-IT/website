@@ -60,7 +60,7 @@ export default function Navbar() {
             className={[
                 styles.header,
                 barActive ? styles.isHovering : '',
-                scrolled ? styles.isScrolled : '', // 👈 add solid on scroll
+                scrolled && ! mobileOpen ? styles.isScrolled : '', // 👈 add solid on scroll
             ].join(' ')}
             onMouseEnter={handleEnterBar}
             onMouseLeave={handleLeaveBar}
