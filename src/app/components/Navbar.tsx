@@ -153,12 +153,12 @@ function ProductsMenu() {
             <Column title="Strategie en advies" href="/strategie-en-advies">
                 <a href="/strategie-en-advies#strategie">Strategie</a>
                 <a href="/strategie-en-advies#inrichting">Inrichting</a>
-                <a href="/strategie-en-advies#implementatie-en-veranderbegeleiding">Implementatie & veranderbegeleiding</a>
+                {/*<a href="/strategie-en-advies#implementatie-en-veranderbegeleiding">Implementatie & veranderbegeleiding</a>*/}
             </Column>
             <Column title="Tech" href="/tech">
                 <a href="/tech#software-op-maat">Software op maat</a>
                 <a href="/tech#oplossingen">Oplossingen</a>
-                <a href="/tech#software-risk-assessment">Software risk assessment</a>
+                {/*<a href="/tech#software-risk-assessment">Software risk assessment</a>*/}
             </Column>
             <Column title="Ondersteuning" href="/ondersteuning">
                 <a href="/ondersteuning#on-site">On site</a>
