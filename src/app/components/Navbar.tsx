@@ -13,12 +13,13 @@ const links = [
 ]
 
 export default function Navbar() {
-    const [hovering, setHovering] = useState(false)       // desktop hover
-    const [open, setOpen] = useState<MenuKey>(null)       // desktop panel
-    const [mobileOpen, setMobileOpen] = useState(false)   // mobile panel
+    const [hovering, setHovering] = useState(false)      // desktop hover
+    const [open, setOpen] = useState<MenuKey>(null)      // desktop dropdown
+    const [mobileOpen, setMobileOpen] = useState(false)  // mobile panel
+    const [scrolled, setScrolled] = useState(false)      // solid on scroll
     const leaveTimer = useRef<number | null>(null)
 
-    // close with Esc
+    // Esc to close panels
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') { setOpen(null); setMobileOpen(false) }
@@ -27,11 +28,19 @@ export default function Navbar() {
         return () => window.removeEventListener('keydown', onKey)
     }, [])
 
-    // lock scroll when the mobile menu is open
+    // Lock page scroll when mobile nav is open
     useEffect(() => {
         document.documentElement.style.overflow = mobileOpen ? 'hidden' : ''
         return () => { document.documentElement.style.overflow = '' }
     }, [mobileOpen])
+
+    // Solid background after small scroll threshold
+    useEffect(() => {
+        const update = () => setScrolled(window.scrollY > 40)
+        update() // set initial state on mount (if landing mid-page)
+        window.addEventListener('scroll', update, { passive: true })
+        return () => window.removeEventListener('scroll', update)
+    }, [])
 
     const handleEnterBar = () => {
         if (leaveTimer.current) window.clearTimeout(leaveTimer.current)
@@ -48,7 +57,11 @@ export default function Navbar() {
 
     return (
         <header
-            className={`${styles.header} ${barActive ? styles.isHovering : ''}`}
+            className={[
+                styles.header,
+                barActive ? styles.isHovering : '',
+                scrolled ? styles.isScrolled : '', // 👈 add solid on scroll
+            ].join(' ')}
             onMouseEnter={handleEnterBar}
             onMouseLeave={handleLeaveBar}
         >
@@ -83,6 +96,7 @@ export default function Navbar() {
                                     <span className={styles.chev} aria-hidden>▾</span>
                                 </button>
 
+                                {/* Dropdown */}
                                 <div
                                     className={`${styles.menuPanel} ${open === item.key ? styles.open : ''}`}
                                     role="menu"
@@ -118,6 +132,7 @@ export default function Navbar() {
                         <li className={styles.panelTitle}>Navigatie</li>
                         {links.map(l => (
                             <li key={l.key}>
+                                {/* Top-level categories in mobile; close panel on click */}
                                 <Link href="#" onClick={() => setMobileOpen(false)}>{l.label}</Link>
                             </li>
                         ))}
@@ -131,21 +146,21 @@ export default function Navbar() {
     )
 }
 
-/* --- Menus (unchanged) --- */
+/* --- Menus --- */
 function ProductsMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="Strategie en advies">
-                <a href="/strategie-en-advies#quick-scan">Quick scan</a>
-                <a href="/strategie-en-advies#samen-op-weg">Samen op weg</a>
-                <a href="/strategie-en-advies#procesregie">Procesregie</a>
+            <Column title="Strategie en advies" href="/strategie-en-advies">
+                <a href="/strategie-en-advies#strategie">Strategie</a>
+                <a href="/strategie-en-advies#inrichting">Inrichting</a>
+                <a href="/strategie-en-advies#implementatie-en-veranderbegeleiding">Implementatie & veranderbegeleiding</a>
             </Column>
-            <Column title="Tech">
+            <Column title="Tech" href="/tech">
                 <a href="/tech#software-op-maat">Software op maat</a>
                 <a href="/tech#oplossingen">Oplossingen</a>
                 <a href="/tech#software-risk-assessment">Software risk assessment</a>
             </Column>
-            <Column title="Ondersteuning">
+            <Column title="Ondersteuning" href="/ondersteuning">
                 <a href="/ondersteuning#on-site">On site</a>
                 <a href="/ondersteuning#platform-migratie">Platform migratie</a>
                 <a href="/ondersteuning#cloud">Cloud</a>
@@ -162,12 +177,12 @@ function ProductsMenu() {
 function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="Onze missie">
+            <Column title="Onze missie" href="/onze-missie">
                 <a href="/onze-missie#onze-waarden">Onze waarden</a>
                 <a href="/onze-missie#uitgangspunten">Uitgangspunten</a>
                 <a href="/onze-missie#waarom-harmonise-it">Waarom Harmonise IT</a>
             </Column>
-            <Column title="Bedrijf">
+            <Column title="Bedrijf" href="/bedrijf">
                 <a href="/bedrijf#het-team">Het team</a>
                 <a href="/bedrijf#privacy-statement">Privacy statement</a>
                 <a href="/contact">Contact</a>
@@ -181,10 +196,12 @@ function ResourcesMenu() {
     )
 }
 
-function Column({ title, children }:{ title:string; children: React.ReactNode }) {
+function Column({ title, href, children }: { title: string; href: string; children: React.ReactNode }) {
     return (
         <div className={styles.col}>
-            <div className={styles.colTitle}>{title}</div>
+            <a href={href} className={styles.colTitleLink}>
+                {title}
+            </a>
             <div className={styles.colList}>{children}</div>
         </div>
     )

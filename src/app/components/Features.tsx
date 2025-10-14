@@ -67,19 +67,27 @@ export default function Features() {
     return (
         <section ref={sectionRef} className="section" aria-label="Features">
             <div className="container">
-                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Grip op IT</h2>
+                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Beleid en technologie in harmonie</h2>
 
-                <div className={s.grid}>
-                    {ITEMS.map(({ title, body, Icon }, idx) => (
-                        <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>
-                            <div className={s.iconWrap} aria-hidden>
-                                <Icon className={s.icon}/>
-                            </div>
-                            <h3 className={s.cardTitle}>{title}</h3>
-                            <p className={s.cardBody}>{body}</p>
-                        </article>
-                    ))}
-                </div>
+                <p>
+                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten.
+                </p>
+
+                <p>
+                    Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen technologie echt in harmonie met het maatschappelijke doel waarvoor het is ontwikkeld.
+                </p>
+
+                {/*<div className={s.grid}>*/}
+                {/*    {ITEMS.map(({ title, body, Icon }, idx) => (*/}
+                {/*        <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>*/}
+                {/*            <div className={s.iconWrap} aria-hidden>*/}
+                {/*                <Icon className={s.icon}/>*/}
+                {/*            </div>*/}
+                {/*            <h3 className={s.cardTitle}>{title}</h3>*/}
+                {/*            <p className={s.cardBody}>{body}</p>*/}
+                {/*        </article>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </div>
         </section>
     )

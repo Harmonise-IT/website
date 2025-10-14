@@ -1,9 +1,10 @@
 /* app/styles/globals.scss */
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --container: 1200px;
   --pad: 24px;
   --pad-sm: 16px;
+  --primary-color: #00feff;
 }
 
 .safe-top   { padding-top: calc(16px + env(safe-area-inset-top)); }

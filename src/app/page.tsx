@@ -7,7 +7,7 @@ export default function HomePage() {
         <>
             <Hero/>
             <Features/>
-            <Team/>
+            {/*<Team/>*/}
         </>
     )
 }

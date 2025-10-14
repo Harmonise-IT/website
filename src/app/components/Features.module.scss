@@ -79,7 +79,7 @@
   display: grid; place-items: center;
   margin-bottom: 14px;
   background: transparent;     /* no fill */
-  color: #00feff;              /* applies to SVG stroke when using currentColor */
+  color: var(--primary-color);              /* applies to SVG stroke when using currentColor */
 }
 
 .icon { color: #fff; opacity: .9; }
