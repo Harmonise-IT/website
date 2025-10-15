@@ -1,10 +1,16 @@
 // components/Features.tsx
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import s from './Features.module.scss'
 
-type Item = { title: string; body: string; Icon: React.FC<React.SVGProps<SVGSVGElement>> }
+type Item = {
+    title: string
+    body: string
+    Icon: React.FC<React.SVGProps<SVGSVGElement>>
+    href: string
+}
 
 const Shield: Item['Icon'] = (props) => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
@@ -22,27 +28,26 @@ const Cloud: Item['Icon'] = (props) => (
         <path d="M7 18h9a4 4 0 0 0 0-8 6 6 0 0 0-11-1 4 4 0 0 0 2 9z" />
     </svg>
 )
-const Spark: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
-        <path d="M12 3v6M12 15v6M3 12h6M15 12h6M6 6l4 4M14 14l4 4M18 6l-4 4M10 14l-4 4" />
-    </svg>
-)
-const Chart: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
-        <path d="M4 19V5M10 19V9M16 19V3M22 19H2" />
-    </svg>
-)
-const Handshake: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
-        <path d="M8 13l3-3a3 3 0 0 1 4 0l3 3" />
-        <path d="M3 12l5-5 3 3m5 5l5-5-3-3" />
-    </svg>
-)
 
 const ITEMS: Item[] = [
-    { title: 'Strategie & Advies', body: 'We brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: we slaan de brug tussen beleid en uitvoerbare IT.', Icon: Shield },
-    { title: 'Tech', body: 'Wij ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.', Icon: Cog },
-    { title: 'Ondersteuning', body: 'Digitale verandering vraagt om meer dan techniek. We bieden ondersteuning bij implementatie en begeleiden verandertrajecten, zodat nieuwe systemen ook écht landen in de organisatie.', Icon: Cloud },
+    {
+        title: 'Strategie & Advies',
+        body: 'We brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: we slaan de brug tussen beleid en uitvoerbare IT.',
+        Icon: Shield,
+        href: '/strategie-en-advies',
+    },
+    {
+        title: 'Tech',
+        body: 'Wij ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.',
+        Icon: Cog,
+        href: '/tech',
+    },
+    {
+        title: 'Ondersteuning',
+        body: 'Digitale verandering vraagt om meer dan techniek. We bieden ondersteuning bij implementatie en begeleiden verandertrajecten, zodat nieuwe systemen ook écht landen in de organisatie.',
+        Icon: Cloud,
+        href: '/ondersteuning',
+    },
 ]
 
 export default function Features() {
@@ -53,7 +58,12 @@ export default function Features() {
         const el = sectionRef.current
         if (!el) return
         const io = new IntersectionObserver(
-            ([entry]) => { if (entry.isIntersecting) { setVisible(true); io.unobserve(el) } },
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true)
+                    io.unobserve(el)
+                }
+            },
             { threshold: 0.14 }
         )
         io.observe(el)
@@ -66,24 +76,31 @@ export default function Features() {
                 <h2 className={`${s.title} ${visible ? s.in : ''}`}>Beleid en technologie in harmonie</h2>
 
                 <p>
-                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten.
+                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en
+                    systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten.
                 </p>
 
                 <p>
-                    Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie echt in harmonie met de maatschappij.
+                    Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale
+                    oplossingen en techniek naar helder beleid. Zo brengen we technologie echt in harmonie met de maatschappij.
                 </p>
 
                 <div className={s.grid}>
-                    {ITEMS.map(({ title, body, Icon }, idx) => (
-                        <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>
+                    {ITEMS.map(({ title, body, Icon, href }, idx) => (
+                        <Link
+                            key={title}
+                            href={href}
+                            className={`${s.card} ${visible ? s.in : ''}`}
+                            style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}
+                        >
                             <div className={s.iconBlockContainer}>
                                 <div className={s.iconWrap} aria-hidden>
-                                    <Icon className={s.icon}/>
+                                    <Icon className={s.icon} />
                                 </div>
                                 <h3 className={s.cardTitle}>{title}</h3>
                             </div>
                             <p className={s.cardBody}>{body}</p>
-                        </article>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -28,6 +28,10 @@
 
 /* Card: matte black, hairline white outline */
 .card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
   position: relative;
   background: #000;
   border: 1px solid rgba(255,255,255,.14);   /* very thin white outline */
