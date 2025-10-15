@@ -163,7 +163,6 @@ function ProductsMenu() {
             <Column title="Strategie en advies" href="/strategie-en-advies">
                 <a href="/strategie-en-advies#strategie">Strategie</a>
                 <a href="/strategie-en-advies#inrichting">Inrichting</a>
-                {/*<a href="/strategie-en-advies#implementatie-en-veranderbegeleiding">Implementatie & veranderbegeleiding</a>*/}
             </Column>
             <Column title="Tech" href="/tech">
                 <a href="/tech#software-op-maat">Software op maat</a>
