@@ -10,14 +10,13 @@ export default function TechPage() {
                     id="software-op-maat"
                     kicker="Tech"
                     ariaLabel="software-op-maat"
-                    title="Software op maat"
-                    accent="die doet wat het moet doen"
+                    title="Applicaties"
+                    accent="waar je op kunt rekenen"
                     lead="We ontwerpen en maken software die publieke organisaties écht vooruithelpt.
 Onze oplossingen zijn niet theoretisch, maar tastbaar: professionele software die betrouwbaar, veilig en gebruiksvriendelijk is.
 We combineren technische vakkennis met inzicht in de publieke context, zodat techniek de bedoeling ondersteunt."
                     points={[
                         '<strong>Apps & Tools →</strong> we ontwikkelen passende oplossingen voor uw digitale uitdagingen.',
-                        '<strong>API-koppelingen →</strong> integraties met alle nodige systemen.',
                         '<strong>Dashboards →</strong> we ontwikkelen dashboards en analysemethoden waarmee organisaties beter kunnen sturen op maatschappelijke resultaten.',
                     ]}
                     ctas={[
@@ -41,15 +40,16 @@ We combineren technische vakkennis met inzicht in de publieke context, zodat tec
                 <ContentBlock
                     id="oplossingen"
                     kicker="Tech"
-                    title="Oplossingen"
-                    accent="die schaalbaar blijven"
+                    title="Data-uitwisseling"
+                    accent="tussen alle partijen"
                     lead="Van prototype tot productie. Wij leveren oplossingen met inzicht in kosten, prestaties en risico's."
                     points={[
+                        '<strong>API-koppelingen →</strong> integraties met alle nodige systemen.',
                         '<strong>Observability-first.</strong> Metrics, logs en tracing vanaf dag één.',
                         '<strong>Automatisering.</strong> CI/CD, IaC en repeatable delivery pipelines.',
                     ]}
                     ctas={[
-                        { label: 'Bekijk cases', href: '/case-studies', variant: 'ghost' },
+                        // { label: 'Bekijk cases', href: '/case-studies', variant: 'ghost' },
                     ]}
                     badges={['Kubernetes', 'Terraform', 'Grafana']}
                     media={{

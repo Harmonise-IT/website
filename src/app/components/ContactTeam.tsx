@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import styles from './ContactTeam.module.scss'
+import Link from 'next/link'
 
 export type ContactTeamProps = {
     name: string
@@ -40,33 +41,33 @@ export default function ContactTeam({
                 </p>
 
                 <div className={styles.actions}>
-                    <a className={styles.btn} href={`mailto:${email}`} aria-label={`E-mail naar ${name}`}>
+                    <Link className={styles.btn} href={`mailto:${email}`} aria-label={`E-mail naar ${name}`}>
                         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden>
                             <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" strokeWidth="1.6"/>
                             <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" strokeWidth="1.6"/>
                         </svg>
                         Mail
-                    </a>
+                    </Link>
 
                     {phone && (
-                        <a className={styles.btn} href={`tel:${phone.replace(/\s+/g, '')}`} aria-label={`Bel ${name}`}>
+                        <Link className={styles.btn} href={`tel:${phone.replace(/\s+/g, '')}`} aria-label={`Bel ${name}`}>
                             <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden>
                                 <path d="M6.5 4.5l3 3-2 2a12 12 0 006 6l2-2 3 3-1 2a3 3 0 01-2 1.5c-7.6 0-14-6.4-14-14a3 3 0 011.5-2l2-.5z" fill="none" stroke="currentColor" strokeWidth="1.6"/>
                             </svg>
                             Bel
-                        </a>
+                        </Link>
                     )}
 
                     {linkLinkedIn && (
-                        <a className={styles.ghost} href={linkLinkedIn} target="_blank" rel="noreferrer">
+                        <Link className={styles.ghost} href={linkLinkedIn} target="_blank" rel="noreferrer">
                             LinkedIn
-                        </a>
+                        </Link>
                     )}
                 </div>
 
                 <div className={styles.details}>
-                    <a href={`mailto:${email}`}>{email}</a>
-                    {phone && <span> · <a href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</a></span>}
+                    <Link href={`mailto:${email}`}>{email}</Link>
+                    {phone && <span> · <Link href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</Link></span>}
                 </div>
             </div>
 

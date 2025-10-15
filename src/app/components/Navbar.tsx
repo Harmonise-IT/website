@@ -141,10 +141,6 @@ export default function Navbar() {
                             <li key={l.key}>
                                 <Link href={l.href} onClick={() => setMobileOpen(false)}>{l.label}</Link>
                             </li>
-                            // <li key={l.key}>
-                            //     {/* Top-level categories in mobile; close panel on click */}
-                            //     <Link href="#" onClick={() => setMobileOpen(false)}>{l.label}</Link>
-                            // </li>
                         ))}
                         <li className={styles.panelCta}>
                             <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
@@ -161,18 +157,17 @@ function ProductsMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="Strategie en advies" href="/strategie-en-advies">
-                <a href="/strategie-en-advies#strategie">Strategie</a>
-                <a href="/strategie-en-advies#inrichting">Inrichting</a>
+                <Link href="/strategie-en-advies#strategie">Strategie</Link>
+                <Link href="/strategie-en-advies#inrichting">Inrichting</Link>
             </Column>
             <Column title="Tech" href="/tech">
-                <a href="/tech#software-op-maat">Software op maat</a>
-                <a href="/tech#oplossingen">Oplossingen</a>
-                {/*<a href="/tech#software-risk-assessment">Software risk assessment</a>*/}
+                <Link href="/tech#software-op-maat">Software op maat</Link>
+                <Link href="/tech#oplossingen">Oplossingen</Link>
             </Column>
             <Column title="Ondersteuning" href="/ondersteuning">
-                <a href="/ondersteuning#on-site">On site</a>
-                <a href="/ondersteuning#platform-migratie">Platform migratie</a>
-                <a href="/ondersteuning#cloud">Cloud</a>
+                <Link href="/ondersteuning#on-site">On site</Link>
+                <Link href="/ondersteuning#platform-migratie">Platform migratie</Link>
+                <Link href="/ondersteuning#cloud">Cloud</Link>
             </Column>
             <Aside
                 title="Voor gemeenten in 2026"
@@ -187,14 +182,14 @@ function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="Onze missie" href="/onze-missie">
-                <a href="/onze-missie#onze-waarden">Onze waarden</a>
-                <a href="/onze-missie#uitgangspunten">Uitgangspunten</a>
-                <a href="/onze-missie#waarom-harmonise-it">Waarom Harmonise IT</a>
+                <Link href="/onze-missie#onze-waarden">Onze waarden</Link>
+                <Link href="/onze-missie#uitgangspunten">Uitgangspunten</Link>
+                <Link href="/onze-missie#waarom-harmonise-it">Waarom Harmonise IT</Link>
             </Column>
             <Column title="Bedrijf" href="/bedrijf">
-                <a href="/bedrijf#het-team">Het team</a>
-                <a href="/bedrijf#privacy-statement">Privacy statement</a>
-                <a href="/contact">Contact</a>
+                <Link href="/bedrijf#het-team">Het team</Link>
+                <Link href="/bedrijf#privacy-statement">Privacy statement</Link>
+                <Link href="/contact">Contact</Link>
             </Column>
             <Aside
                 title="Even sparren?"
@@ -208,9 +203,9 @@ function ResourcesMenu() {
 function Column({ title, href, children }: { title: string; href: string; children: React.ReactNode }) {
     return (
         <div className={styles.col}>
-            <a href={href} className={styles.colTitleLink}>
+            <Link href={href} className={styles.colTitleLink}>
                 {title}
-            </a>
+            </Link>
             <div className={styles.colList}>{children}</div>
         </div>
     )

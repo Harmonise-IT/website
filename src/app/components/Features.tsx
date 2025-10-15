@@ -41,12 +41,12 @@ const Handshake: Item['Icon'] = (props) => (
 )
 
 const ITEMS: Item[] = [
-    { title: 'Veiligheid', body: 'Dreigingsmodellen, hardening en continue beveiligingsreviews.', Icon: Shield },
-    { title: 'Betrouwbare levering', body: 'Lean, inzichtelijke pipelines die altijd op tijd opleveren.', Icon: Cog },
-    { title: 'Cloudarchitectuur', body: 'Pragmatische patronen op AWS/Azure met duidelijke kostenbeheersing.', Icon: Cloud },
-    { title: 'Automatisering', body: 'Elimineer handmatig werk met scripts, IaC en slimme workflows.', Icon: Spark },
-    { title: 'Inzichten', body: 'Datamodellering en dashboards die teams écht gebruiken.', Icon: Chart },
-    { title: 'Partnerschap', body: 'Wij stemmen technologie af op uw organisatie.', Icon: Handshake },
+    { title: 'Strategie & Advies', body: 'Dreigingsmodellen, hardening en continue beveiligingsreviews.', Icon: Shield },
+    { title: 'Tech', body: 'Lean, inzichtelijke pipelines die altijd op tijd opleveren.', Icon: Cog },
+    { title: 'Ondersteuning', body: 'Pragmatische patronen op AWS/Azure met duidelijke kostenbeheersing.', Icon: Cloud },
+    // { title: 'Automatisering', body: 'Elimineer handmatig werk met scripts, IaC en slimme workflows.', Icon: Spark },
+    // { title: 'Inzichten', body: 'Datamodellering en dashboards die teams écht gebruiken.', Icon: Chart },
+    // { title: 'Partnerschap', body: 'Wij stemmen technologie af op uw organisatie.', Icon: Handshake },
 ]
 
 export default function Features() {
@@ -74,20 +74,20 @@ export default function Features() {
                 </p>
 
                 <p>
-                    Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen technologie echt in harmonie met het maatschappelijke doel waarvoor het is ontwikkeld.
+                    Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie echt in harmonie met de maatschappij.
                 </p>
 
-                {/*<div className={s.grid}>*/}
-                {/*    {ITEMS.map(({ title, body, Icon }, idx) => (*/}
-                {/*        <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>*/}
-                {/*            <div className={s.iconWrap} aria-hidden>*/}
-                {/*                <Icon className={s.icon}/>*/}
-                {/*            </div>*/}
-                {/*            <h3 className={s.cardTitle}>{title}</h3>*/}
-                {/*            <p className={s.cardBody}>{body}</p>*/}
-                {/*        </article>*/}
-                {/*    ))}*/}
-                {/*</div>*/}
+                <div className={s.grid}>
+                    {ITEMS.map(({ title, body, Icon }, idx) => (
+                        <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>
+                            <div className={s.iconWrap} aria-hidden>
+                                <Icon className={s.icon}/>
+                            </div>
+                            <h3 className={s.cardTitle}>{title}</h3>
+                            <p className={s.cardBody}>{body}</p>
+                        </article>
+                    ))}
+                </div>
             </div>
         </section>
     )
