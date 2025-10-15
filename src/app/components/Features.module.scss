@@ -16,7 +16,7 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 10px;
+  margin-top: 48px;
 }
 
 @media (max-width: 1000px) {
@@ -84,10 +84,16 @@
 
 .icon { color: #fff; opacity: .9; }
 
+.iconBlockContainer {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+}
+
 .cardTitle {
   font-size: 18px;
   font-weight: 600;
-  margin: 0 0 6px;
+  margin: 0 16px 6px;
 }
 
 .cardBody {

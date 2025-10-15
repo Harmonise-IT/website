@@ -6,7 +6,6 @@ import s from './Features.module.scss'
 
 type Item = { title: string; body: string; Icon: React.FC<React.SVGProps<SVGSVGElement>> }
 
-// 00feff
 const Shield: Item['Icon'] = (props) => (
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
         <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" />
@@ -41,12 +40,9 @@ const Handshake: Item['Icon'] = (props) => (
 )
 
 const ITEMS: Item[] = [
-    { title: 'Strategie & Advies', body: 'Dreigingsmodellen, hardening en continue beveiligingsreviews.', Icon: Shield },
-    { title: 'Tech', body: 'Lean, inzichtelijke pipelines die altijd op tijd opleveren.', Icon: Cog },
-    { title: 'Ondersteuning', body: 'Pragmatische patronen op AWS/Azure met duidelijke kostenbeheersing.', Icon: Cloud },
-    // { title: 'Automatisering', body: 'Elimineer handmatig werk met scripts, IaC en slimme workflows.', Icon: Spark },
-    // { title: 'Inzichten', body: 'Datamodellering en dashboards die teams écht gebruiken.', Icon: Chart },
-    // { title: 'Partnerschap', body: 'Wij stemmen technologie af op uw organisatie.', Icon: Handshake },
+    { title: 'Strategie & Advies', body: 'We brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: we slaan de brug tussen beleid en uitvoerbare IT.', Icon: Shield },
+    { title: 'Tech', body: 'Wij ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.', Icon: Cog },
+    { title: 'Ondersteuning', body: 'Digitale verandering vraagt om meer dan techniek. We bieden ondersteuning bij implementatie en begeleiden verandertrajecten, zodat nieuwe systemen ook écht landen in de organisatie.', Icon: Cloud },
 ]
 
 export default function Features() {
@@ -80,10 +76,12 @@ export default function Features() {
                 <div className={s.grid}>
                     {ITEMS.map(({ title, body, Icon }, idx) => (
                         <article key={title} className={`${s.card} ${visible ? s.in : ''}`} style={{ transitionDelay: visible ? `${120 + idx * 60}ms` : undefined }}>
-                            <div className={s.iconWrap} aria-hidden>
-                                <Icon className={s.icon}/>
+                            <div className={s.iconBlockContainer}>
+                                <div className={s.iconWrap} aria-hidden>
+                                    <Icon className={s.icon}/>
+                                </div>
+                                <h3 className={s.cardTitle}>{title}</h3>
                             </div>
-                            <h3 className={s.cardTitle}>{title}</h3>
                             <p className={s.cardBody}>{body}</p>
                         </article>
                     ))}
