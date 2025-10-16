@@ -35,7 +35,6 @@ export default function Navbar() {
         return () => window.removeEventListener('keydown', onKey)
     }, [])
 
-    // Lock page scroll when mobile nav is open
     useEffect(() => {
         document.documentElement.style.overflow = mobileOpen ? 'hidden' : ''
         return () => { document.documentElement.style.overflow = '' }
@@ -181,14 +180,12 @@ function ProductsMenu() {
 function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="" href="#">
-                <Link href="#"></Link>
-            </Column>
             <Column title="" href="/onze-missie">
                 <Link href="/wie-wij-zijn#over-harmonise-it">Over Harmonise IT</Link>
                 <Link href="/wie-wij-zijn#missie-en-visie">Missie & Visie</Link>
                 <Link href="/wie-wij-zijn#contact">Contact</Link>
             </Column>
+
             <Aside
                 title="Even sparren?"
                 blurb="Wij zijn beschikbaar."
@@ -197,6 +194,7 @@ function ResourcesMenu() {
         </div>
     )
 }
+
 
 function Column({ title, href, children }: { title: string; href: string; children: React.ReactNode }) {
     return (
