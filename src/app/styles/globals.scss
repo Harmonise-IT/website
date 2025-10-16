@@ -16,6 +16,11 @@
   scrollbar-color: #3a3a3a #0a0a0a;
 }
 
+[id] {
+  scroll-margin-top: 16px;
+}
+
+
 html, body {
   height: 100%;
   color-scheme: dark;
