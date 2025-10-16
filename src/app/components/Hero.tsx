@@ -6,15 +6,14 @@ import styles from './Hero.module.scss'
 import RotatingWords from './RotatingWords'
 
 const VIDEOS = [
-    { srcWebm: '/hero/hero-video-2.webm', srcMp4: '/hero/hero-video-2.mp4', poster: '/hero/hero-image-2.png' },
     { srcWebm: '/hero/hero-video-1.webm', srcMp4: '/hero/hero-video-1.mp4', poster: '/hero/hero-image-1.png' },
+    { srcWebm: '/hero/hero-video-2.webm', srcMp4: '/hero/hero-video-2.mp4', poster: '/hero/hero-image-2.png' },
     { srcWebm: '/hero/hero-video-3.webm', srcMp4: '/hero/hero-video-3.mp4', poster: '/hero/hero-image-3.png' },
 ]
 
 export default function Hero() {
     const [activeIndex, setActiveIndex] = useState(0)
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
-    const prevIndexRef = useRef<number>(0)
 
     useEffect(() => {
         const active = videoRefs.current[activeIndex]

@@ -63,33 +63,6 @@ export default function StrategieEnAdviesPage() {
                     mediaSide="left"
                 />
 
-                {/*<ContentBlock*/}
-                {/*    id="implementatie-en-veranderbegeleiding"*/}
-                {/*    kicker="Strategie en advies"*/}
-                {/*    ariaLabel="implementatie-en-veranderbegeleiding"*/}
-                {/*    title="Implementatie & Veranderbegeleiding"*/}
-                {/*    accent=""*/}
-                {/*    lead="Wij vertalen beleid naar uitvoerbare IT, en IT naar begrijpelijke keuzes. Zo ontstaat ruimte voor innovatie én vertrouwen bij medewerkers, bestuurders en burgers."*/}
-                {/*    points={[*/}
-                {/*        '<strong>Implementatieondersteuning →</strong> We begeleiden de implementatie van onze eigen maatwerkoplossingen én complexe migratieopgaven, zodat transities soepel verlopen.',*/}
-                {/*        '<strong>Veranderbegeleiding →</strong> We helpen organisaties wennen aan nieuwe manieren van werken. Onze aanpak zorgt voor draagvlak, kennisdeling en continuïteit.',*/}
-                {/*    ]}*/}
-                {/*    ctas={[*/}
-                {/*        { label: 'Doe het samen', href: '/contact', variant: 'primary' },*/}
-                {/*    ]}*/}
-                {/*    media={{*/}
-                {/*        kind: 'video',*/}
-                {/*        src: '/software-op-maat.mp4',*/}
-                {/*        poster: '/hit-logo-blue-transparent.png',*/}
-                {/*        loop: true,*/}
-                {/*        muted: true,*/}
-                {/*        playsInline: true,*/}
-                {/*        preload: 'metadata',*/}
-                {/*        autoPlayInView: true,*/}
-                {/*    }}*/}
-                {/*    mediaSide="right"*/}
-                {/*/>*/}
-
                 <div style={{ marginTop: 64 }}>
                     <ContactTeam
                         name="Neem contact op met Sjouke Elsman"

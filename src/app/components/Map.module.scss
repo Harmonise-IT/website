@@ -1,0 +1,80 @@
+.mapSection {
+  margin: 4rem 0;
+}
+
+.map {
+  --radius: 18px;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  outline: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  background: #0b0b0b;
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 45vh, 560px);
+  border: 0;
+  filter: grayscale(12%) contrast(1.05) saturate(0.9);
+  transition: filter .25s ease, transform .25s ease;
+}
+
+@media (hover:hover) {
+  .map:hover iframe { filter: none; }
+}
+
+.mapBadge {
+  position: absolute;
+  top: 8px;
+  margin-left: 8px;
+  padding: 16px 48px;
+  border-radius: 14px;
+  background: black;
+  color: #eaeaea;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+  max-width: min(90%, 360px);
+}
+
+.mapBadge h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  letter-spacing: .2px;
+  //opacity: .9;
+}
+
+.mapBadge p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  opacity: .8;
+}
+
+.mapActions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5ch;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: #f0f0f0; text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .06s ease;
+}
+.btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.22); }
+.btn:active { transform: translateY(1px); }
+
+.btnPrimary {
+  border-color: rgba(0,153,255,0.35);
+  background: rgba(0,153,255,0.12);
+}
+.btnPrimary:hover { background: rgba(0,153,255,0.2); border-color: rgba(0,153,255,0.55); }
+
+@media (prefers-reduced-motion: reduce) {
+  .map iframe { transition: none; }
+}

@@ -181,15 +181,13 @@ function ProductsMenu() {
 function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="Onze missie" href="/onze-missie">
-                <Link href="/onze-missie#onze-waarden">Onze waarden</Link>
-                <Link href="/onze-missie#uitgangspunten">Uitgangspunten</Link>
-                <Link href="/onze-missie#waarom-harmonise-it">Waarom Harmonise IT</Link>
+            <Column title="" href="#">
+                <Link href="#"></Link>
             </Column>
-            <Column title="Bedrijf" href="/bedrijf">
-                <Link href="/bedrijf#het-team">Het team</Link>
-                <Link href="/bedrijf#privacy-statement">Privacy statement</Link>
-                <Link href="/contact">Contact</Link>
+            <Column title="" href="/onze-missie">
+                <Link href="/wie-wij-zijn#over-harmonise-it">Over Harmonise IT</Link>
+                <Link href="/wie-wij-zijn#missie-en-visie">Missie & Visie</Link>
+                <Link href="/wie-wij-zijn#contact">Contact</Link>
             </Column>
             <Aside
                 title="Even sparren?"
