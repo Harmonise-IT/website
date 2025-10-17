@@ -44,6 +44,7 @@ export default function WieWijZijnPage() {
                         width: 256,
                         height: 256,
                     }}
+                    forceShowMediaOnMobile={true}
                     mediaSide="left"
                 />
 

@@ -52,6 +52,7 @@ export type ContentBlockProps = {
 
     media?: MediaVideo | MediaImage | MediaNode
     mediaSide?: 'left' | 'right'   // default 'right'
+    forceShowMediaOnMobile?: boolean
 }
 
 export default function ContentBlock({
@@ -68,6 +69,7 @@ export default function ContentBlock({
                                          badges = [],
                                          media,
                                          mediaSide = 'right',
+                                         forceShowMediaOnMobile = false,
                                      }: ContentBlockProps) {
     const sectionRef = useRef<HTMLElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
@@ -75,7 +77,7 @@ export default function ContentBlock({
 
     useEffect(() => {
         const el = sectionRef.current
-        if (!el) return
+        if (! el) return
         const io = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -90,11 +92,12 @@ export default function ContentBlock({
     }, [])
 
     useEffect(() => {
-        if (!inView) return
+        if (! inView) return
         if (media && media.kind === 'video') {
             const auto = media.autoPlayInView ?? true
             if (auto && videoRef.current) {
-                videoRef.current.play().catch(() => {})
+                videoRef.current.play().catch(() => {
+                })
             }
         }
     }, [inView, media])
@@ -124,19 +127,19 @@ export default function ContentBlock({
 
                         {lead && <p className={styles.lead}>{lead}</p>}
 
-                        {!!points?.length && (
+                        {!! points?.length && (
                             <ul className={styles.points}>
                                 {points.map((p, i) => (
                                     <li key={i} style={{ transitionDelay: inView ? `${60 * (i + 1)}ms` : undefined }}>
-                                        {typeof p === 'string' ? <span dangerouslySetInnerHTML={{ __html: p }} /> : p}
+                                        {typeof p === 'string' ? <span dangerouslySetInnerHTML={{ __html: p }}/> : p}
                                     </li>
                                 ))}
                             </ul>
                         )}
 
-                        {!!afterPoints && <p className={styles.afterPoints}>{afterPoints}</p>}
+                        {!! afterPoints && <p className={styles.afterPoints}>{afterPoints}</p>}
 
-                        {!!ctas?.length && (
+                        {!! ctas?.length && (
                             <div className={styles.ctas}>
                                 {ctas.map((c, i) => (
                                     <a
@@ -156,7 +159,7 @@ export default function ContentBlock({
                             </div>
                         )}
 
-                        {!!badges?.length && (
+                        {!! badges?.length && (
                             <div className={styles.badges}>
                                 {badges.map((b, i) => (
                                     <span key={i}>{b}</span>
@@ -167,7 +170,12 @@ export default function ContentBlock({
 
                     {/* Media column */}
                     {media && (
-                        <div className={[styles.visual, inView ? styles.in : ''].join(' ')}>
+                        <div
+                            className={[
+                                styles.visual,
+                                inView ? styles.in : '',
+                                forceShowMediaOnMobile ? styles.showMobile : '',
+                            ].join(' ')}>
                             <div className={styles.frame}>
                                 {media.kind === 'video' && (
                                     <video
@@ -196,7 +204,7 @@ export default function ContentBlock({
 
                                 {media.kind === 'node' && media.node}
 
-                                <div className={styles.glow} aria-hidden />
+                                <div className={styles.glow} aria-hidden/>
                             </div>
                         </div>
                     )}

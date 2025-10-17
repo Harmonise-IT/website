@@ -55,6 +55,9 @@
   .visual {
     display: none;
   }
+  .visual.showMobile {
+    display: block;
+  }
 }
 
 .kicker {
