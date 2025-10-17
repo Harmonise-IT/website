@@ -1,0 +1,15 @@
+.title {
+  font-size: clamp(28px, 5.2vw, 54px);
+  line-height: 1.05;
+  font-weight: 600;
+  text-align: center;
+  margin: 32px 0 28px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1);
+}
+.in.title, .title.in { opacity: 1; transform: translateY(0); } /* in case of class order */
+
+.accent {
+  color: var(--primary-color);
+}

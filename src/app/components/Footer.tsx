@@ -5,34 +5,38 @@ import Image from 'next/image'
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     {
-        title: 'Contact',
+    // <Link href={`mailto:${email}`}>{email}</Link>
+
+    title: 'Contact',
         links: [
-            { href: '#mail', label: 'Mail: info@harmonise.nl' },
-            { href: '#phone', label: 'Telefoon: +31 645540216' },
+            { href: 'mailto:info@harmonise.nl', label: 'Mail: info@harmonise.nl' },
+            { href: 'tel:+31645540216', label: 'Telefoon: +31 645540216' },
         ],
     },
     {
         title: 'Wat wij doen',
         links: [
-            { href: '#s&a', label: 'Strategie en advies' },
-            { href: '#tech', label: 'Tech' },
-            { href: '#ondersteuning', label: 'Ondersteuning' },
+            { href: '/strategie-en-advies#strategie', label: 'Strategie' },
+            { href: '/strategie-en-advies#inrichting', label: 'Inrichting' },
+            { href: '/tech#software-op-maat', label: 'Software op maat' },
+            { href: '/tech#integraties', label: 'Integraties' },
         ],
     },
     {
         title: 'Wie wij zijn',
         links: [
-            { href: '#onze-missie', label: 'Onze missie' },
-            { href: '#bedrijf', label: 'Bedrijf' },
+            { href: '/wie-wij-zijn', label: 'Over Harmonise IT' },
+            { href: '/wie-wij-zijn#onze-visie', label: 'Onze visie' },
+            { href: '/wie-wij-zijn#locatie', label: 'Locatie' },
         ],
     },
-    {
-        title: 'Follow',
-        links: [
-            { href: '#linkedin', label: 'LinkedIn' },
-            { href: '#github', label: 'GitHub' },
-        ],
-    },
+    // {
+    //     title: 'Follow',
+    //     links: [
+    //         { href: '#linkedin', label: 'LinkedIn' },
+    //         { href: 'https://github.com/Harmonise-IT', label: 'GitHub' },
+    //     ],
+    // },
 ]
 
 export default function Footer() {

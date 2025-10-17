@@ -2,7 +2,9 @@ import styles from './Map.module.scss'
 
 export default function Map() {
     return (
-        <section id="locatie" aria-label="Locatie" className={styles.mapSection}>
+        <section aria-label="Locatie" className={styles.mapSection}>
+            <h2>Locatie</h2>
+            <p>Je vindt ons in Amsterdam aan de Prinsengracht. Ben je in de buurt? Kom gerust langs, we ontmoeten je graag.</p>
             <div className={styles.map}>
                 <iframe
                     title="Harmonise IT Locatie"

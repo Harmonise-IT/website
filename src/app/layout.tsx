@@ -6,7 +6,7 @@ import { Montserrat } from 'next/font/google'
 import Footer from '@/app/components/Footer'
 
 export const metadata: Metadata = {
-    title: 'Harmonise IT | Digital Home',
+    title: 'Harmonise IT',
     description: 'Grip op uw digitale landschap.',
 }
 

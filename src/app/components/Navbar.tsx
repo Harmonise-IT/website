@@ -16,7 +16,8 @@ const mobileLinks = [
     { key: 'mobile-strategie' as const, label: 'Strategie', href: '/strategie-en-advies#strategie' },
     { key: 'mobile-inrichting' as const, label: 'Inrichting', href: '/strategie-en-advies#inrichting' },
     { key: 'mobile-software-op-maat' as const, label: 'Software op maat', href: '/tech#software-op-maat' },
-    { key: 'mobile-oplossingen', label: 'Oplossingen', href: '/tech#oplossingen' },
+    { key: 'mobile-oplossingen', label: 'Integraties', href: '/tech#integraties' },
+    { key: 'mobile-wie-wij-zijn', label: 'Wie wij zijn', href: '/wie-wij-zijn' },
 ]
 
 export default function Navbar() {
@@ -155,18 +156,13 @@ export default function Navbar() {
 function ProductsMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="Strategie en advies" href="/strategie-en-advies">
+            <Column title="Strategie & advies" href="/strategie-en-advies">
                 <Link href="/strategie-en-advies#strategie">Strategie</Link>
                 <Link href="/strategie-en-advies#inrichting">Inrichting</Link>
             </Column>
             <Column title="Tech" href="/tech">
                 <Link href="/tech#software-op-maat">Software op maat</Link>
-                <Link href="/tech#oplossingen">Oplossingen</Link>
-            </Column>
-            <Column title="Ondersteuning" href="/ondersteuning">
-                <Link href="/ondersteuning#on-site">On site</Link>
-                <Link href="/ondersteuning#platform-migratie">Platform migratie</Link>
-                <Link href="/ondersteuning#cloud">Cloud</Link>
+                <Link href="/tech#integraties">Integraties</Link>
             </Column>
             <Aside
                 title="Voor gemeenten in 2026"
@@ -181,9 +177,9 @@ function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="" href="/onze-missie">
-                <Link href="/wie-wij-zijn#over-harmonise-it">Over Harmonise IT</Link>
-                <Link href="/wie-wij-zijn#missie-en-visie">Missie & Visie</Link>
-                <Link href="/wie-wij-zijn#contact">Contact</Link>
+                <Link href="/wie-wij-zijn">Over Harmonise IT</Link>
+                <Link href="/wie-wij-zijn#onze-visie">Onze visie</Link>
+                <Link href="/wie-wij-zijn#locatie">Locatie</Link>
             </Column>
 
             <Aside

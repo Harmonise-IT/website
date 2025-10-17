@@ -1,6 +1,12 @@
 // app/tech/page.tsx  (of je huidige Tech routestructuur)
 import ContactTeam from '@/app/components/ContactTeam'
 import ContentBlock from '@/app/components/ContentBlock'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Harmonise IT | Tech',
+    description: 'Tech pagina.',
+}
 
 export default function TechPage() {
     return (
@@ -21,85 +27,43 @@ We combineren technische vakkennis met inzicht in de publieke context, zodat tec
                     ]}
                     ctas={[
                         { label: 'Plan een gesprek', href: '/contact', variant: 'primary' },
-                        { label: 'Of start met een Quick Scan →', href: '/strategie-en-advies#quick-scan', variant: 'link' },
                     ]}
                     badges={['TypeScript', 'Next.js', 'Angular', 'Python', 'Docker', 'Kubernetes']}
                     media={{
-                        kind: 'video',
-                        src: '/software-op-maat.mp4',
-                        poster: '/hit-logo-blue-transparent.png',
-                        loop: true,
-                        muted: true,
-                        playsInline: true,
-                        preload: 'metadata',
-                        autoPlayInView: true,
+                        kind: 'image',
+                        src: '/software-op-maat.jpeg',
+                        alt: 'Software op maat voor publieke organisaties.',
                     }}
                     mediaSide="right"
                 />
 
                 <ContentBlock
-                    id="oplossingen"
+                    id="integraties"
                     kicker="Tech"
                     title="Data-uitwisseling"
                     accent="tussen alle partijen"
-                    lead="Van prototype tot productie. Wij leveren oplossingen met inzicht in kosten, prestaties en risico's."
+                    lead="Het veilig delen van data tussen alle relevante systemen wordt steeds belangrijker. Wij bouwen integraties die naadloze data-uitwisseling tussen deze systemen mogelijk maakt."
                     points={[
-                        '<strong>API-koppelingen →</strong> integraties met alle nodige systemen.',
-                        '<strong>Observability-first.</strong> Metrics, logs en tracing vanaf dag één.',
-                        '<strong>Automatisering.</strong> CI/CD, IaC en repeatable delivery pipelines.',
+                        '<strong>API-koppelingen →</strong> integraties met alle relevante systemen.',
+                        '<strong>Microservice →</strong> kleinschalige oplossingen die specifieke functionaliteit bieden',
+                        '<strong>Automatisering →</strong> workflows die handmatige taken verminderen en processen versnellen',
                     ]}
-                    ctas={[
-                        // { label: 'Bekijk cases', href: '/case-studies', variant: 'ghost' },
-                    ]}
-                    badges={['Kubernetes', 'Terraform', 'Grafana']}
                     media={{
-                        kind: 'video',
-                        src: '/hoofd.mp4',
-                        poster: '/hit-logo-blue-transparent.png',
-                        loop: true,
-                        muted: true,
-                        playsInline: true,
-                        preload: 'metadata',
-                        autoPlayInView: true,
+                        kind: 'image',
+                        src: '/integraties.jpeg',
+                        alt: 'Integraties tussen systemen.',
                     }}
                     mediaSide="left"
                 />
 
-                {/*<ContentBlock*/}
-                {/*    id="software-risk-assessment"*/}
-                {/*    kicker="Tech"*/}
-                {/*    title="Software risk assessment"*/}
-                {/*    accent="zonder verrassingen"*/}
-                {/*    lead="Een snelle, pragmatische doorlichting van applicatie, proces en cloud-inrichting. We brengen risico’s in kaart, bepalen kans/impact en leveren concrete maatregelen met eigenaar en doorlooptijd."*/}
-                {/*    points={[*/}
-                {/*        '<strong>Threat modeling & attack surface.</strong> Systemen, datastromen en afhankelijkheden in kaart; snelle check t.o.v. OWASP Top 10.',*/}
-                {/*        '<strong>Security reviews & bewijs.</strong> Code/CI/CD, secrets, permissies en cloudconfiguratie. Misconfiguraties, logging/monitoring en alertering.',*/}
-                {/*        '<strong>Prioriteiten & roadmap.</strong> Heatmap met kans/impact, quick wins binnen 2 weken en maatregelen per kwartaal.',*/}
-                {/*    ]}*/}
-                {/*    ctas={[*/}
-                {/*        { label: 'Plan een assessment', href: '/contact?topic=assessment', variant: 'primary' },*/}
-                {/*        { label: 'Bekijk voorbeeldrapport →', href: '/downloads/voorbeeld-assessment.pdf', variant: 'link' },*/}
-                {/*    ]}*/}
-                {/*    badges={['OWASP', 'ISO 27001', 'AVG/GDPR', 'STRIDE', 'CIS Benchmarks']}*/}
-                {/*    media={{*/}
-                {/*        kind: 'image',*/}
-                {/*        src: '/software-risk-assessment.jpg',*/}
-                {/*        alt: 'Risk heatmap en bevindingen van een software risk assessment',*/}
-                {/*        width: 1280,*/}
-                {/*        height: 900,*/}
-                {/*    }}*/}
-                {/*    mediaSide="right"*/}
-                {/*/>*/}
-
-
                 <div style={{ marginTop: 24 }}>
                     <ContactTeam
                         name="Neem contact op met Yoeri Moens"
-                        role="Strategie, Techniek & Beheer"
+                        role="Techniek, Strategie & Beheer"
                         email="y.moens@harmonise.nl"
                         phone="+31 6 4554 0216"
                         photoSrc="/team-yoeri.jpeg"
-                        linkLinkedIn="https://www.linkedin.com/in/..."
+                        linkLinkedIn="https://www.linkedin.com/in/yoeri-moens"
                     />
                 </div>
             </div>

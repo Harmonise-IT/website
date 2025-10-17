@@ -46,6 +46,7 @@ export type ContentBlockProps = {
     lead?: string
 
     points?: Array<string | React.ReactNode>
+    afterPoints?: string
     ctas?: Cta[]
     badges?: string[]
 
@@ -62,6 +63,7 @@ export default function ContentBlock({
                                          accent,
                                          lead,
                                          points = [],
+                                         afterPoints,
                                          ctas = [],
                                          badges = [],
                                          media,
@@ -131,6 +133,8 @@ export default function ContentBlock({
                                 ))}
                             </ul>
                         )}
+
+                        {!!afterPoints && <p className={styles.afterPoints}>{afterPoints}</p>}
 
                         {!!ctas?.length && (
                             <div className={styles.ctas}>

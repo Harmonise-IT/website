@@ -18,35 +18,36 @@ const Shield: Item['Icon'] = (props) => (
     </svg>
 )
 const Cog: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
-        <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-        <path d="M19 12a7 7 0 0 0-.1-1l1.8-1.4-1.8-3.2-2.1.6a7 7 0 0 0-1.7-1L15 2h-6l-.1 2a7 7 0 0 0-1.7 1l-2.1-.6-1.8 3.2L4 11a7 7 0 0 0 0 2l-1.8 1.4 1.8 3.2 2.1-.6a7 7 0 0 0 1.7 1L9 22h6l.1-2a7 7 0 0 0 1.7-1l2.1.6 1.8-3.2L18.9 13c.07-.33.1-.66.1-1z" />
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .7.4 1.34 1.02 1.65.32.17.69.26 1.06.26H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
     </svg>
 )
-const Cloud: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" {...props}>
-        <path d="M7 18h9a4 4 0 0 0 0-8 6 6 0 0 0-11-1 4 4 0 0 0 2 9z" />
+const Person: Item['Icon'] = (props) => (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00feff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
     </svg>
 )
 
 const ITEMS: Item[] = [
     {
-        title: 'Strategie & Advies',
+        title: 'Strategie & advies',
         body: 'We brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: we slaan de brug tussen beleid en uitvoerbare IT.',
         Icon: Shield,
         href: '/strategie-en-advies',
     },
     {
         title: 'Tech',
-        body: 'Wij ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.',
+        body: 'We ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.',
         Icon: Cog,
         href: '/tech',
     },
     {
-        title: 'Ondersteuning',
-        body: 'Digitale verandering vraagt om meer dan techniek. We bieden ondersteuning bij implementatie en begeleiden verandertrajecten, zodat nieuwe systemen ook écht landen in de organisatie.',
-        Icon: Cloud,
-        href: '/ondersteuning',
+        title: 'Wie wij zijn',
+        body: 'We zijn de ontwerpers en bouwers die samen met u werken aan duurzame, adaptieve oplossingen, zodat beleid en technologie elkaar versterken.',
+        Icon: Person,
+        href: '/wie-wij-zijn',
     },
 ]
 
@@ -77,7 +78,7 @@ export default function Features() {
 
                 <p>
                     Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en
-                    systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten.
+                    systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. We begrijpen beide kanten.
                 </p>
 
                 <p>
