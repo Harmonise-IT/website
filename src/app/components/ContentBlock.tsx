@@ -127,6 +127,17 @@ export default function ContentBlock({
 
                         {lead && <p className={styles.lead}>{lead}</p>}
 
+                        {!!media && media.kind === 'image' && forceShowMediaOnMobile ? (
+                            <img
+                                className={[styles.img, styles.mobileOnly].join(' ')}
+                                src={media.src}
+                                alt={media.alt}
+                                width={media.width}
+                                height={media.height}
+                                loading={media.priority ? 'eager' : 'lazy'}
+                            />
+                        ) : null}
+
                         {!! points?.length && (
                             <ul className={styles.points}>
                                 {points.map((p, i) => (
@@ -174,7 +185,6 @@ export default function ContentBlock({
                             className={[
                                 styles.visual,
                                 inView ? styles.in : '',
-                                forceShowMediaOnMobile ? styles.showMobile : '',
                             ].join(' ')}>
                             <div className={styles.frame}>
                                 {media.kind === 'video' && (

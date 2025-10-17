@@ -237,3 +237,11 @@
     opacity: 1;
   }
 }
+
+/* default: hide the mobile-inline image */
+.mobileOnly { display: none; }
+
+/* show it only on mobile */
+@media (max-width: 640px) {
+  .mobileOnly { display: block; margin: 12px 0; }
+}
