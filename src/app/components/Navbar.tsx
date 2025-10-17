@@ -176,7 +176,7 @@ function ProductsMenu() {
 function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="" href="/onze-missie">
+            <Column title="" href="/wie-wij-zijn">
                 <Link href="/wie-wij-zijn">Over Harmonise IT</Link>
                 <Link href="/wie-wij-zijn#onze-visie">Onze visie</Link>
                 <Link href="/wie-wij-zijn#locatie">Locatie</Link>
