@@ -16,7 +16,7 @@ export default function WieWijZijnPage() {
                 <h2 className={`${s.title} ${s.in}`}>Over <span className={s.accent}>Harmonise IT</span></h2>
 
                 <p>
-                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten. Harmonise IT vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie echt in harmonie met de maatschappij.
+                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten. Harmonise IT vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie in harmonie met de maatschappij.
                 </p>
 
                 <p>
@@ -32,7 +32,7 @@ export default function WieWijZijnPage() {
                     className="driePerspectieven"
                     lead="Bij Harmonise IT geloven we dat duurzame digitale ontwikkeling ontstaat waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
                     points={[
-                        '<strong>Menselijk →</strong> Technologie is er voor mensen. We houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burger en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
+                        '<strong>Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burger en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
                         '<strong>Beleidsmatig →</strong> De overheid opereert in een omgeving die continue verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Overheden zoeken elkaar hierom vaker op om volgens gezamenlijke standaarden hun IT toekomstbestendig te maken.',
                         '<strong>Technisch →</strong> Software en infrastructuur vormen de technische basis die beleid en werkprocessen ondersteunt. Wij ontwerpen en bouwen systemen die betrouwbaar, schaalbaar en adaptief zijn.',
                     ]}

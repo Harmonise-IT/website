@@ -51,7 +51,6 @@ export default function Hero() {
             }
         }
 
-        // Fallback: if we still reach the end, advance index (state update)
         const handleEnded = () => setActiveIndex((n) => (n + 1) % VIDEOS.length)
 
         // Preload the next video early

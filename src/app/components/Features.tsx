@@ -33,19 +33,19 @@ const Person: Item['Icon'] = (props) => (
 const ITEMS: Item[] = [
     {
         title: 'Strategie & advies',
-        body: 'We brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: we slaan de brug tussen beleid en uitvoerbare IT.',
+        body: 'Wij brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: wij slaan de brug tussen beleid en technologie.',
         Icon: Shield,
         href: '/strategie-en-advies',
     },
     {
         title: 'Tech',
-        body: 'We ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.',
+        body: 'Wij ontwerpen en bouwen software die doet wat het moet doen. Van apps tot API-koppelingen tot dashboards. Al onze oplossingen zijn op maat.',
         Icon: Cog,
         href: '/tech',
     },
     {
         title: 'Wie wij zijn',
-        body: 'We zijn de ontwerpers en bouwers die samen met u werken aan duurzame, adaptieve oplossingen, zodat beleid en technologie elkaar versterken.',
+        body: 'Wij zijn de ontwerpers en bouwers die samen met u werken aan duurzame, adaptieve oplossingen, zodat beleid en technologie elkaar versterken.',
         Icon: Person,
         href: '/wie-wij-zijn',
     },
@@ -78,12 +78,12 @@ export default function Features() {
 
                 <p>
                     Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en
-                    systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. We begrijpen beide kanten.
+                    systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten.
                 </p>
 
                 <p>
                     Harmonise IT vormt de schakel tussen technologie en bestuur: wij vertalen beleid naar praktische digitale
-                    oplossingen en techniek naar helder beleid. Zo brengen we technologie echt in harmonie met de maatschappij.
+                    oplossingen en techniek naar helder beleid. Zo brengen we technologie in harmonie met de maatschappij.
                 </p>
 
                 <div className={s.grid}>

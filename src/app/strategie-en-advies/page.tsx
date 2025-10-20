@@ -18,10 +18,10 @@ export default function StrategieEnAdviesPage() {
                     ariaLabel="strategie"
                     title="Strategie"
                     accent="voor digitale opgaven"
-                    lead="We helpen gemeenten en publieke organisaties om de regie te nemen over hun digitale opgaven. Wij brengen structuur en overzicht, zodat technologie werkt voor de burger en voor de mensen die ermee werken."
+                    lead="Wij helpen gemeenten en publieke organisaties om de regie te nemen over hun digitale opgaven. Wij brengen structuur en overzicht, zodat technologie werkt voor de burger en voor de mensen die ermee werken."
                     points={[
-                        '<strong>I-visie →</strong> We helpen organisaties hun digitale positie te bepalen in relatie tot maatschappelijke opgaven. Wat betekent digitalisering voor dienstverlening, beleid en samenwerking met inwoners?',
-                        '<strong>Data- en informatiestrategie →</strong> We brengen in kaart hoe systemen, processen en data elkaar beïnvloeden en versterken. Overheidsdienstverlening moet begrijpelijk en bereikbaar zijn voor iedereen. We helpen organisaties voldoen aan wet- en regelgeving, waaronder de Wet modernisering elektronische bestuurlijke verkeer (Wmebv). We adviseren over het verantwoord en ethisch gebruik van data. Daarbij voeren we software risk assessments uit om risico’s en afhankelijkheden zichtbaar te maken, en beleid te vertalen naar concrete technische eisen. Zo ontstaat grip op informatiestromen en datakwaliteit.',
+                        '<strong>I-visie →</strong> Wij helpen organisaties hun digitale positie te bepalen in relatie tot maatschappelijke opgaven. Wat betekent digitalisering voor dienstverlening, beleid en samenwerking met inwoners?',
+                        '<strong>Data- en informatiestrategie →</strong> Wij brengen in kaart hoe systemen, processen en data elkaar beïnvloeden en versterken. Overheidsdienstverlening moet begrijpelijk en bereikbaar zijn voor iedereen. Wij helpen organisaties voldoen aan wet- en regelgeving, waaronder de Wet modernisering elektronische bestuurlijke verkeer (Wmebv). Wij adviseren over het verantwoord en ethisch gebruik van data. Daarbij voeren wij software risk assessments uit om risico’s en afhankelijkheden zichtbaar te maken, en beleid te vertalen naar concrete technische eisen. Zo ontstaat grip op informatiestromen en datakwaliteit.',
                     ]}
                     ctas={[
                         { label: 'Stel uw vraag', href: '/contact', variant: 'primary' },
@@ -43,8 +43,8 @@ export default function StrategieEnAdviesPage() {
                     lead=""
                     points={[
                         '<strong>Uitvoeringsvraakstukken →</strong> Veel uitvoeringsvraagstukken bij gemeenten, provincies en omgevingsdiensten draaien in de kern om data. Zaaksystemen en samenwerkingsfunctionaliteiten zijn nauw verbonden met processen, informatievoorziening en datakwaliteit. Wij helpen overheidsorganisaties om deze onderdelen van de uitvoering goed in te richten.',
-                        '<strong>Governance →</strong> We helpen bestuur en organisatie in positie te brengen om sturing te geven aan dataverzameling en -gebruik. Van raad tot uitvoering: we adviseren hoe de beleidscyclus hierop ingericht kan worden.',
-                        '<strong>Samenwerking →</strong> Informatie-uitwisseling stopt niet bij gemeentegrenzen. We helpen bij het ontwerpen van systemen en processen volgens het principe van ‘één overheid’, gebaseerd op open standaarden en de uitgangspunten van Common Ground. Zo voorkomen we dubbele investeringen en vergroten we herbruikbaarheid van data.',
+                        '<strong>Governance →</strong> Wij helpen bestuur en organisatie in positie te brengen om sturing te geven aan dataverzameling en -gebruik. Van raad tot uitvoering: wij adviseren hoe de beleidscyclus hierop ingericht kan worden.',
+                        '<strong>Samenwerking →</strong> Informatie-uitwisseling stopt niet bij gemeentegrenzen. Wij helpen bij het ontwerpen van systemen en processen volgens het principe van ‘één overheid’, gebaseerd op open standaarden en de uitgangspunten van Common Ground. Zo voorkomen we dubbele investeringen en vergroten we herbruikbaarheid van data.',
                     ]}
                     media={{
                         kind: 'image',

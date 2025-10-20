@@ -27,7 +27,6 @@ type MediaImage = {
     width?: number
     height?: number
     priority?: boolean
-    // If you prefer <img> over next/image, we keep it simple here.
 }
 
 type MediaNode = {

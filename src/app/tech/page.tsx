@@ -18,12 +18,12 @@ export default function TechPage() {
                     ariaLabel="software-op-maat"
                     title="Applicaties"
                     accent="waar je op kunt rekenen"
-                    lead="We ontwerpen en maken software die publieke organisaties écht vooruithelpt.
+                    lead="Wij ontwerpen en maken software die publieke organisaties vooruithelpt.
 Onze oplossingen zijn niet theoretisch, maar tastbaar: professionele software die betrouwbaar, veilig en gebruiksvriendelijk is.
 We combineren technische vakkennis met inzicht in de publieke context, zodat techniek de bedoeling ondersteunt."
                     points={[
-                        '<strong>Apps & Tools →</strong> we ontwikkelen passende oplossingen voor uw digitale uitdagingen.',
-                        '<strong>Dashboards →</strong> we ontwikkelen dashboards en analysemethoden waarmee organisaties beter kunnen sturen op maatschappelijke resultaten.',
+                        '<strong>Apps & Tools →</strong> Wij ontwikkelen passende oplossingen voor uw digitale uitdagingen.',
+                        '<strong>Dashboards →</strong> Wij ontwikkelen dashboards en analysemethoden waarmee organisaties beter kunnen sturen op maatschappelijke resultaten.',
                     ]}
                     ctas={[
                         { label: 'Plan een gesprek', href: '/contact', variant: 'primary' },
