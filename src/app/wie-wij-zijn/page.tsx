@@ -30,11 +30,11 @@ export default function WieWijZijnPage() {
                     title="Onze"
                     accent="visie"
                     className="driePerspectieven"
-                    lead="Bij Harmonise IT geloven we dat duurzame digitale ontwikkeling ontstaat waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
+                    lead="Bij Harmonise IT geloven we dat duurzame digitale ontwikkeling ontstaat daar waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
                     points={[
-                        '<strong>Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burger en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
-                        '<strong>Beleidsmatig →</strong> De overheid opereert in een omgeving die continue verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Overheden zoeken elkaar hierom vaker op om volgens gezamenlijke standaarden hun IT toekomstbestendig te maken.',
-                        '<strong>Technisch →</strong> Software en infrastructuur vormen de technische basis die beleid en werkprocessen ondersteunt. Wij ontwerpen en bouwen systemen die betrouwbaar, schaalbaar en adaptief zijn.',
+                        '<strong>Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burgers en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
+                        '<strong>Beleidsmatig →</strong> De overheid opereert in een omgeving die continu verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Systemen moeten vanaf het begin adaptief worden ingericht om rekening te houden met deze ontwikkelingen. Daarbij houden we rekening met gezamenlijke open standaarden.',
+                        '<strong>Technisch →</strong> Software en infrastructuur vormen vormen de technische basis voor de uitvoering van beleid en werkprocessen. Wij ontwerpen en bouwen systemen die betrouwbaar, schaalbaar en aanpasbaar zijn.',
                     ]}
                     afterPoints="Door deze drie elementen in samenhang te ontwikkelen, creëren we harmonieuze IT: technologie die mensen ondersteunt, beleid versterkt en maatschappelijke doelen dichterbij brengt."
                     media={{

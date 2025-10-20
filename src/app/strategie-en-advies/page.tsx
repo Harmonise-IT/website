@@ -20,8 +20,8 @@ export default function StrategieEnAdviesPage() {
                     accent="voor digitale opgaven"
                     lead="Wij helpen gemeenten en publieke organisaties om de regie te nemen over hun digitale opgaven. Wij brengen structuur en overzicht, zodat technologie werkt voor de burger en voor de mensen die ermee werken."
                     points={[
-                        '<strong>I-visie →</strong> Wij helpen organisaties hun digitale positie te bepalen in relatie tot maatschappelijke opgaven. Wat betekent digitalisering voor dienstverlening, beleid en samenwerking met inwoners?',
-                        '<strong>Data- en informatiestrategie →</strong> Wij brengen in kaart hoe systemen, processen en data elkaar beïnvloeden en versterken. Overheidsdienstverlening moet begrijpelijk en bereikbaar zijn voor iedereen. Wij helpen organisaties voldoen aan wet- en regelgeving, waaronder de Wet modernisering elektronische bestuurlijke verkeer (Wmebv). Wij adviseren over het verantwoord en ethisch gebruik van data. Daarbij voeren wij software risk assessments uit om risico’s en afhankelijkheden zichtbaar te maken, en beleid te vertalen naar concrete technische eisen. Zo ontstaat grip op informatiestromen en datakwaliteit.',
+                        '<strong>Visie op de digitale overheid →</strong> Wij helpen lokale overheden en uitvoeringsorganisaties bij het bepalen van hun positie ten aanzien van digitalisering en maatschappelijke opgaven. Wat betekent digitalisering voor inwoners, dienstverlening, beleid en samenwerking?\n',
+                        '<strong>Grip op data en informatie →</strong> Wij helpen overheden om inzicht te krijgen in hun datakwaliteit en informatiestromen, en zorgen dat deze elkaar versterken. Daarbij vertalen we wetgeving, zoals de Wmebv en de Woo, naar praktische kaders voor uitvoering en governance. Zo ontstaat overzicht, vertrouwen en ruimte om data verantwoord te benutten.\n',
                     ]}
                     ctas={[
                         { label: 'Stel uw vraag', href: '/contact', variant: 'primary' },
@@ -42,9 +42,9 @@ export default function StrategieEnAdviesPage() {
                     accent="van uw organisatie"
                     lead=""
                     points={[
-                        '<strong>Uitvoeringsvraakstukken →</strong> Veel uitvoeringsvraagstukken bij gemeenten, provincies en omgevingsdiensten draaien in de kern om data. Zaaksystemen en samenwerkingsfunctionaliteiten zijn nauw verbonden met processen, informatievoorziening en datakwaliteit. Wij helpen overheidsorganisaties om deze onderdelen van de uitvoering goed in te richten.',
-                        '<strong>Governance →</strong> Wij helpen bestuur en organisatie in positie te brengen om sturing te geven aan dataverzameling en -gebruik. Van raad tot uitvoering: wij adviseren hoe de beleidscyclus hierop ingericht kan worden.',
-                        '<strong>Samenwerking →</strong> Informatie-uitwisseling stopt niet bij gemeentegrenzen. Wij helpen bij het ontwerpen van systemen en processen volgens het principe van ‘één overheid’, gebaseerd op open standaarden en de uitgangspunten van Common Ground. Zo voorkomen we dubbele investeringen en vergroten we herbruikbaarheid van data.',
+                        '<strong>Datagedreven werken →</strong> Wij helpen overheden om inzichten uit data te vertalen naar beter beleid en een effectievere uitvoering. Dat vraagt om betrouwbare data en om medewerkers die weten hoe ze data kunnen gebruiken.',
+                        '<strong>Uitvoeringsvraakstukken →</strong> Wij helpen overheden om hun uitvoering toekomstbestendig te maken: door processen te herontwerpen, informatiestromen te verbeteren en systemen goed op elkaar aan te sluiten. Wij helpen bij opgaven als de invoering van het Digitaal Stelsel Omgevingswet (DSO), de uitvoering van de Wet modernisering elektronisch bestuurlijk verkeer (Wmebv), de Wet open overheid (Woo) en zaakgericht werken (ZGW).',
+                        '<strong>Samenwerking →</strong> Informatie-uitwisseling stopt niet bij gemeentegrenzen. Wij helpen bij het ontwerpen van systemen en processen volgens het principe van ‘één overheid’, gebaseerd op open standaarden en de uitgangspunten van onder andere Common Ground. Zo voorkomen we dubbele investeringen en vergroten we herbruikbaarheid van data.',
                     ]}
                     media={{
                         kind: 'image',

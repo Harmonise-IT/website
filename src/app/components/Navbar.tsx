@@ -167,7 +167,7 @@ function ProductsMenu() {
             <Aside
                 title="Voor gemeenten in 2026"
                 blurb="Commitment Common Ground VNG. Wmebv per 1 januari. Uitvoering Omgevingswet, DSO."
-                link={{ href: '/contact', label: 'Boek Quick Scan' }}
+                link={{ href: '/contact', label: 'Wij helpen je' }}
             />
         </div>
     )
@@ -183,7 +183,7 @@ function ResourcesMenu() {
             </Column>
 
             <Aside
-                title="Even sparren?"
+                title="Vraag?"
                 blurb="Wij zijn beschikbaar."
                 link={{ href: '/contact', label: 'Bel nu' }}
             />

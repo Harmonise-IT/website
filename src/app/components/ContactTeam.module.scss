@@ -1,6 +1,6 @@
 .wrap {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 256px 1fr;
   gap: 20px;
   align-items: center;
 
@@ -13,11 +13,11 @@
   box-shadow: 0 14px 40px rgba(0,0,0,.25);
 }
 
-.media { width: 100px; height: 100px; }
+.media { width: 256px; height: 256px; }
 
 .photo {
-  width: 100px;
-  height: 100px;
+  width: 256px;
+  height: 256px;
   border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,.18);
