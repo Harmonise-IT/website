@@ -4,7 +4,9 @@
   --container: 1200px;
   --pad: 24px;
   --pad-sm: 16px;
-  --primary-color: #00feff;
+  //--primary-color: #00feff;
+  --primary-color: #F4C061;
+  //--primary-color: #74e5a1;
 }
 
 .safe-top   { padding-top: calc(16px + env(safe-area-inset-top)); }
@@ -59,7 +61,10 @@ body {
 }
 
 .section {
-  background: #000;
+  //background: black;
+  //background: #202020;
+  background: #1E2535;
+  //background: #2B3247;
   color: #fff;
   padding: 72px 0 96px;
 }

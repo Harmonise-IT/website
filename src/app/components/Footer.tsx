@@ -48,7 +48,7 @@ export default function Footer() {
                 <div className={styles.lead}>
                     <Image
                         className={styles.heroLogo}
-                        src="/hit-logo-blue-transparent.png"
+                        src="/hit-logo-white-transparent.png"
                         width={64}
                         height={64}
                         alt="Harmonise IT logo"
