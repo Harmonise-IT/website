@@ -14,15 +14,15 @@
 .hero::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: -1px; /* overlap next section by 1px */
-  height: 22vh;                     /* tweak to taste */
+  left: 0; right: 0; bottom: -1px;     /* overlap seam by 1px */
+  height: clamp(96px, 22vh, 240px);    /* more fade depth */
   pointer-events: none;
   background: linear-gradient(
                   to bottom,
                   rgba(0,0,0,0) 0%,
-                  rgba(0,0,0,0.4) 40%,
-                  rgba(0,0,0,0.7) 70%,
-                  var(--secondary-background) 100%
+                  rgba(0,0,0,.35) 45%,
+                  rgba(0,0,0,.65) 70%,
+                  var(--primary-background) 100%     /* 👈 MUST match Features bg */
   );
 }
 
