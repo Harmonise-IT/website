@@ -6,7 +6,7 @@ import { Montserrat } from 'next/font/google'
 import Footer from '@/app/components/Footer'
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://test.harmonise.nl'),
+    metadataBase: new URL('https://harmonise.nl'),
     title: {
         default: 'Harmonise IT',
         template: '%s | Harmonise IT',
