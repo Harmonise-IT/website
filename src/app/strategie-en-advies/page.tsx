@@ -43,7 +43,7 @@ export default function StrategieEnAdviesPage() {
                     lead=""
                     points={[
                         '<strong>Datagedreven werken →</strong> Wij helpen overheden om inzichten uit data te vertalen naar beter beleid en een effectievere uitvoering. Dat vraagt om betrouwbare data en om medewerkers die weten hoe ze data kunnen gebruiken.',
-                        '<strong>Uitvoeringsvraakstukken →</strong> Wij helpen overheden om hun uitvoering toekomstbestendig te maken: door processen te herontwerpen, informatiestromen te verbeteren en systemen goed op elkaar aan te sluiten. Wij helpen bij opgaven als de invoering van het Digitaal Stelsel Omgevingswet (DSO), de uitvoering van de Wet modernisering elektronisch bestuurlijk verkeer (Wmebv), de Wet open overheid (Woo) en zaakgericht werken (ZGW).',
+                        '<strong>Uitvoeringsvraakstukken →</strong> Wij helpen overheden om hun uitvoering toekomstbestendig te maken: door processen te herontwerpen, informatiestromen te verbeteren en systemen goed op elkaar aan te sluiten. Wij helpen bij opgaven als de invoering van het Digitaal Stelsel Omgevingswet <span class="accent-500">(DSO)</span>, de uitvoering van de Wet modernisering elektronisch bestuurlijk verkeer <span class="accent-500">(Wmebv)</span>, de Wet open overheid <span class="accent-500">(Woo)</span> en zaakgericht werken <span class="accent-500">(ZGW)</span>.',
                         '<strong>Samenwerking →</strong> Informatie-uitwisseling stopt niet bij gemeentegrenzen. Wij helpen bij het ontwerpen van systemen en processen volgens het principe van ‘één overheid’, gebaseerd op open standaarden en de uitgangspunten van onder andere Common Ground. Zo voorkomen we dubbele investeringen en vergroten we herbruikbaarheid van data.',
                     ]}
                     media={{
@@ -56,7 +56,7 @@ export default function StrategieEnAdviesPage() {
 
                 <div style={{ marginTop: 64 }}>
                     <ContactTeam
-                        name="Neem contact op met Sjouke Elsman"
+                        name="Sjouke Elsman"
                         role="Beleid, Strategie & Procesregie"
                         email="s.elsman@harmonise.nl"
                         phone="+31 645540216"

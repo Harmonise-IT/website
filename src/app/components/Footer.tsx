@@ -5,9 +5,9 @@ import Image from 'next/image'
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     {
-    // <Link href={`mailto:${email}`}>{email}</Link>
+        // <Link href={`mailto:${email}`}>{email}</Link>
 
-    title: 'Contact',
+        title: 'Contact',
         links: [
             { href: 'mailto:info@harmonise.nl', label: 'Mail: info@harmonise.nl' },
             { href: 'tel:+31645540216', label: 'Telefoon: +31 645540216' },
@@ -42,17 +42,19 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={styles.divider} />
+            <div className={styles.divider}/>
 
             <div className="container">
                 <div className={styles.lead}>
-                    <Image
-                        className={styles.heroLogo}
-                        src="/hit-logo-white-transparent.png"
-                        width={64}
-                        height={64}
-                        alt="Harmonise IT logo"
-                    />
+                    <Link href="/" className={styles.brand}>
+                        <Image
+                            className={styles.heroLogo}
+                            src="/hit-logo-white-transparent.png"
+                            width={64}
+                            height={64}
+                            alt="Harmonise IT logo"
+                        />
+                    </Link>
                     <span>Harmonise IT</span>
                 </div>
 

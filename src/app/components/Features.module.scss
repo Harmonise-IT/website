@@ -33,7 +33,7 @@
   display: block;
   cursor: pointer;
   position: relative;
-  background: #000;
+  background: var(--secondary-background);
   border: 1px solid rgba(255,255,255,.14);   /* very thin white outline */
   border-radius: 16px;
   padding: 20px;

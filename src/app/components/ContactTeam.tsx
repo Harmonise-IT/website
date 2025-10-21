@@ -35,7 +35,7 @@ export default function ContactTeam({
             </div>
 
             <div className={styles.meta}>
-                <h3 className={styles.name}>{name}</h3>
+                <h3 className={styles.name}>Neem contact op met <span className='accent'>{name}</span></h3>
                 <p className={styles.role}>
                     {role}
                 </p>

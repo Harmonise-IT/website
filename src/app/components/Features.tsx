@@ -74,7 +74,7 @@ export default function Features() {
     return (
         <section ref={sectionRef} className="section" aria-label="Features">
             <div className="container">
-                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Beleid en technologie in harmonie</h2>
+                <h2 className={`${s.title} ${visible ? s.in : ''}`}>Beleid en technologie <span className="accent">in harmonie</span></h2>
 
                 <p>
                     Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en

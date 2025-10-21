@@ -22,7 +22,7 @@
                   rgba(0,0,0,0) 0%,
                   rgba(0,0,0,0.4) 40%,
                   rgba(0,0,0,0.7) 70%,
-                  #000 100%
+                  var(--secondary-background) 100%
   );
 }
 
@@ -98,7 +98,7 @@
 .primary {
   display: inline-block;
   background: #fff;
-  color: #000;
+  color: var(--secondary-background);
   padding: 14px 18px;
   border-radius: 10px;
   font-weight: 600;

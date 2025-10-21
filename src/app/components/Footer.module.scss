@@ -1,9 +1,9 @@
 /* components/Footer.module.scss */
 
-$bg: #0a0a0a;
+$bg: var(--secondary-background);
 $ink: #e7e7e7;
 $muted: #b7b7b7;
-$line: #1a1a1a;
+$line: var(--secondary-background);
 
 .footer {
   color: $ink;

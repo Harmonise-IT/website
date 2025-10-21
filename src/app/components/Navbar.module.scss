@@ -1,16 +1,16 @@
 /* components/Navbar.module.scss */
-
-$black: #000;
 $white: #fff;
 $ink: #0b1020;
+$black: var(--secondary-background);
 
+/* ---------- Header ---------- */
 .header {
   position: fixed;
   inset: 0 0 auto 0;
   height: 72px;
   z-index: 60;
   background: transparent;
-  transition: background-color .25s ease, box-shadow .25s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
   will-change: background-color;
 
   &::after {
@@ -18,31 +18,33 @@ $ink: #0b1020;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -20px; // slightly below the nav
-    height: 20px; // height of the fade
+    bottom: -20px;
+    height: 20px;
     pointer-events: none;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent);
     opacity: 0;
     transition: opacity 0.25s ease;
   }
 }
 
 .isScrolled {
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
-  backdrop-filter: blur(4px);
+  background: color-mix(in srgb, var(--secondary-background) 88%, transparent);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.isHovering {
+  background: color-mix(in srgb, var(--secondary-background) 96%, white 4%);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
+  outline: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .isScrolled::after,
 .isHovering::after {
-  opacity: 1; // fade appears only when background is active
+  opacity: 1;
 }
 
-.isHovering {
-  background: $black;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
-}
-
+/* ---------- Nav Layout ---------- */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -60,7 +62,7 @@ $ink: #0b1020;
   color: $white;
   text-decoration: none;
   font-weight: 700;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 .links {
@@ -74,23 +76,24 @@ $ink: #0b1020;
   position: relative;
 }
 
-/* NEW: actions container so Contact + burger align properly */
+/* Actions container for CTA + burger alignment */
 .actions {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* ---------- Dropdown Links ---------- */
 .colTitleLink {
   display: block;
   font-size: 12px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 10px;
   text-decoration: none;
   color: $white;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 
   &:hover {
     opacity: 1;
@@ -98,7 +101,6 @@ $ink: #0b1020;
     text-underline-offset: 2px;
   }
 }
-
 
 .linkWrap {
   position: relative;
@@ -116,18 +118,18 @@ $ink: #0b1020;
   padding: 10px 14px;
   border-radius: 10px;
   font: inherit;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .linkItem:hover,
 .active .linkItem {
-  background: $black;
+  background: color-mix(in srgb, var(--secondary-background) 94%, white 6%);
   color: $white;
 }
 
 .chev {
   font-size: 12px;
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .textLink {
@@ -135,14 +137,14 @@ $ink: #0b1020;
   text-decoration: none;
   padding: 10px 12px;
   border-radius: 10px;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .textLink:hover {
-  background: rgba(255, 255, 255, .08);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-/* CTA */
+/* ---------- CTA ---------- */
 .cta {
   background: $white;
   color: $ink;
@@ -150,35 +152,46 @@ $ink: #0b1020;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  transition: opacity .2s ease;
-}
+  transition: opacity 0.2s ease;
 
-.cta:hover {
-  opacity: .9;
+  &:hover {
+    opacity: 0.92;
+  }
 }
 
 /* ---------- Dropdown panel (desktop) ---------- */
 .menuPanel {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 12px) scale(.98);
+  transform: translate(-50%, 12px) scale(0.98);
   top: calc(100% + 6px);
 
   width: max-content;
   max-width: min(1100px, 92vw);
 
-  background: rgba(10, 10, 10, .92);
+  background: color-mix(in srgb, var(--secondary-background) 92%, transparent);
   color: $white;
   border-radius: 14px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, .45), 0 1px 0 rgba(255, 255, 255, .03) inset;
-  backdrop-filter: blur(8px);
+  box-shadow:
+          0 22px 60px rgba(0, 0, 0, 0.28),
+          0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
   padding: 24px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .18s ease, transform .22s cubic-bezier(.22, 1, .36, 1), visibility 0s linear .22s;
+  transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.22s;
+  margin-top: 6px;
 
-  &::before { content:""; position:absolute; top:-14px; left:0; right:0; height:14px; }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    height: 14px;
+  }
 }
 
 .open {
@@ -186,10 +199,9 @@ $ink: #0b1020;
   visibility: visible;
   transform: translate(-50%, 0) scale(1);
   pointer-events: auto;
-  transition: opacity .18s ease, transform .3s cubic-bezier(.22, 1, .36, 1), visibility 0s linear 0s;
+  transition: opacity 0.18s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0s;
 }
 
-/* menu layout */
 .menuGrid {
   display: grid;
   grid-auto-flow: column;
@@ -208,9 +220,9 @@ $ink: #0b1020;
 
 .colTitle {
   font-size: 12px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 10px;
 }
 
@@ -220,17 +232,18 @@ $ink: #0b1020;
   border-radius: 10px;
   color: $white;
   text-decoration: none;
-  transition: background-color .15s ease;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
 }
 
-.colList a:hover {
-  background: rgba(255, 255, 255, .06);
-}
-
-/* Aside card */
+/* ---------- Aside card ---------- */
 .aside {
-  inline-size: 256px;          /* preferred width in the grid */
-  background: rgba(255,255,255,.06);
+  inline-size: 256px;
+  background: color-mix(in srgb, var(--secondary-background) 86%, white 14%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   padding: 16px;
 }
@@ -241,7 +254,7 @@ $ink: #0b1020;
 }
 
 .asideBlurb {
-  opacity: .8;
+  opacity: 0.8;
   margin: 0 0 10px;
 }
 
@@ -255,16 +268,14 @@ $ink: #0b1020;
   font-weight: 700;
 }
 
-/* ----------- MOBILE ADDITIONS ----------- */
-
-/* NEW: hamburger (hidden on desktop) */
+/* ---------- Mobile additions ---------- */
 .burger {
   display: none;
   width: 40px;
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background: rgba(255, 255, 255, .1);
+  background: color-mix(in srgb, var(--secondary-background) 80%, white 20%);
   cursor: pointer;
 }
 
@@ -276,19 +287,18 @@ $ink: #0b1020;
   border-radius: 2px;
 }
 
-/* NEW: mobile slide-down panel */
 .panel {
   position: fixed;
   inset: 72px 0 0 0;
-  background: rgba(0, 0, 0, .92);
+  background: color-mix(in srgb, var(--secondary-background) 94%, transparent);
   color: $white;
   transform: translateY(-8px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .18s ease, transform .24s cubic-bezier(.22, 1, .36, 1), visibility 0s linear .24s;
-  backdrop-filter: blur(6px);
-  z-index: 59; /* below header but above content */
+  transition: opacity 0.18s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.24s;
+  backdrop-filter: blur(8px);
+  z-index: 59;
 }
 
 .panelOpen {
@@ -296,7 +306,7 @@ $ink: #0b1020;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity .18s ease, transform .28s cubic-bezier(.22, 1, .36, 1), visibility 0s;
+  transition: opacity 0.18s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
 }
 
 .panelList {
@@ -308,10 +318,10 @@ $ink: #0b1020;
 }
 
 .panelTitle {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   padding: 6px 2px;
 }
 
@@ -323,7 +333,7 @@ $ink: #0b1020;
   border-radius: 12px;
 
   &:hover {
-    background: rgba(255, 255, 255, .06);
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -333,7 +343,7 @@ $ink: #0b1020;
   font-weight: 700;
 }
 
-/* Hide desktop links & CTA, show burger on small screens */
+/* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .links {
     display: none;
@@ -345,9 +355,10 @@ $ink: #0b1020;
     display: inline-block;
   }
   .menuGrid {
-    /* stack into two responsive columns on mobile */
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr;
   }
-  .aside { inline-size: auto; }
+  .aside {
+    inline-size: auto;
+  }
 }

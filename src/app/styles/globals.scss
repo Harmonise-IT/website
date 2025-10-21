@@ -4,9 +4,15 @@
   --container: 1200px;
   --pad: 24px;
   --pad-sm: 16px;
-  //--primary-color: #00feff;
   --primary-color: #F4C061;
+  //--primary-color: #00feff;
   //--primary-color: #74e5a1;
+
+  --primary-background: #1E2535;
+  --secondary-background: #202020;
+  //background: black;
+  //background: #202020;
+  //background: #2B3247;
 }
 
 .safe-top   { padding-top: calc(16px + env(safe-area-inset-top)); }
@@ -31,7 +37,7 @@ html, body {
 body {
   margin: 0;
   color: #0b1020;
-  background: #000;
+  background: var(--secondary-background);
 }
 
 ::-webkit-scrollbar {
@@ -61,12 +67,18 @@ body {
 }
 
 .section {
-  //background: black;
-  //background: #202020;
-  background: #1E2535;
-  //background: #2B3247;
+  background: var(--primary-background);
   color: #fff;
   padding: 72px 0 96px;
+}
+
+.accent {
+  color: var(--primary-color);
+}
+
+.accent-500 {
+  color: var(--primary-color);
+  font-weight: 500;
 }
 
 @media (max-width: 760px) {

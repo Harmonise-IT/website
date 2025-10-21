@@ -47,7 +47,7 @@ export default function RotatingWords({ words, intervalMs = 2200 }: Props) {
             <span
                 className={`${styles.wordNow} ${
                     phase === 'in' ? styles.wordIn : styles.wordOut
-                }`}
+                } accent ${styles.accentPill}`}
             >
         {words[i]}
       </span>

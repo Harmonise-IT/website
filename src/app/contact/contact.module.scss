@@ -1,6 +1,6 @@
 .section {
   padding: 84px 0 120px;
-  background: #000;
+  background: var(--primary-background);
   color: #fff;
 
   /* subtle dotted field (same vibe as your app) */
@@ -12,7 +12,7 @@
 .bigCard {
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 18px;
-  background: rgba(255,255,255,.03);
+  background: var(--secondary-background);
   padding: 18px;
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
 
@@ -36,7 +36,7 @@
 .innerCard {
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 14px;
-  background: #0b0f14;
+  background: var(--secondary-background);
   padding: 24px;
   position: relative;
 }

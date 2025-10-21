@@ -9,7 +9,7 @@
   overflow: hidden;
   outline: 1px solid rgba(255,255,255,0.06);
   box-shadow: 0 8px 40px rgba(0,0,0,0.35);
-  background: #0b0b0b;
+  background: var(--secondary-background);
 }
 
 .map iframe {
@@ -31,7 +31,7 @@
   margin-left: 8px;
   padding: 16px 48px;
   border-radius: 14px;
-  background: black;
+  background: var(--secondary-background);
   color: #eaeaea;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -43,7 +43,6 @@
   margin: 0 0 4px;
   font-size: 14px;
   letter-spacing: .2px;
-  //opacity: .9;
 }
 
 .mapBadge p {
@@ -71,7 +70,7 @@
 
 .btnPrimary {
   border-color: rgba(0,153,255,0.35);
-  background: rgba(0,153,255,0.12);
+  background: var(--primary-background);
 }
 .btnPrimary:hover { background: rgba(0,153,255,0.2); border-color: rgba(0,153,255,0.55); }
 
