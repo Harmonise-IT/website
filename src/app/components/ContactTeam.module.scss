@@ -9,88 +9,72 @@
   border-radius: 18px;
   padding: 22px 24px;
   color: #fff;
-
   box-shadow: 0 14px 40px rgba(0,0,0,.25);
 }
 
 .media { width: 256px; height: 256px; }
 
 .photo {
-  width: 256px;
-  height: 256px;
+  width: 256px; height: 256px;
   border-radius: 14px;
   object-fit: cover;
   border: 1px solid rgba(255,255,255,.18);
 }
 
+/* text area */
 .meta { min-width: 0; }
-
-.name {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 6px;
-}
-
-.role {
-  margin: 0 0 14px;
-  opacity: .85;
-  font-size: 15px;
-}
+.name { font-size: 20px; font-weight: 700; margin: 0 0 6px; }
+.role { margin: 0 0 14px; opacity: .85; font-size: 15px; }
 
 .actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: flex; gap: 10px; flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
 .btn, .ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 700;
-  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 14px; border-radius: 12px;
+  font-weight: 700; text-decoration: none;
   transition: transform .18s cubic-bezier(.2,.8,.2,1), opacity .18s ease;
   font-size: 14px;
 }
 
-.btn {
-  background: #fff;
-  color: #0b1020;
-}
-
+.btn { background: #fff; color: #0b1020; }
 .btn:hover { transform: translateY(-2px); }
 
-.ghost {
-  background: rgba(255,255,255,.06);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.12);
-}
-
+.ghost { background: rgba(255,255,255,.06); color: #fff; border: 1px solid rgba(255,255,255,.12); }
 .ghost:hover { opacity: .9; }
 
-.details {
-  font-size: 15px;
-  opacity: .9;
-}
+.details { font-size: 15px; opacity: .9; }
+.details a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.details { word-break: break-word; }
 
-.details a {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
+/* ---------- Mobile layout ---------- */
 @media (max-width: 560px) {
   .wrap {
-    grid-template-columns: 80px 1fr;
-    padding: 18px;
+    grid-template-columns: 1fr;      /* stack */
+    align-items: start;
     gap: 14px;
+    padding: 18px;
   }
-  .media { width: 80px; height: 80px; }
-  .photo { width: 80px; height: 80px; }
+
+  .media {
+    width: 220px; height: 220px;
+    margin: 4px auto 4px;            /* center image */
+  }
+  .photo { width: 220px; height: 220px; }
+
   .name { font-size: 18px; }
   .role { font-size: 14px; margin-bottom: 10px; }
-  .btn, .ghost { font-size: 13px; padding: 8px 12px; }
+
+  /* Make actions look tidy & wrap nicely */
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  .btn, .ghost {
+    justify-content: center;         /* centered labels/icons */
+    font-size: 13px; padding: 10px 12px;
+  }
 }

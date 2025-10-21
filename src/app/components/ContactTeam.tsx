@@ -27,12 +27,15 @@ export default function ContactTeam({
                 <Image
                     src={photoSrc}
                     alt={`Foto van ${name}`}
-                    width={84}
-                    height={84}
+                    width={256}
+                    height={256}
                     className={styles.photo}
+                    sizes="(max-width: 560px) 220px, 256px"
+                    quality={92}
                     priority
                 />
             </div>
+
 
             <div className={styles.meta}>
                 <h3 className={styles.name}>Neem contact op met <span className='accent'>{name}</span></h3>
