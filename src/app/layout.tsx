@@ -1,4 +1,8 @@
 // app/layout.tsx
+
+export const dynamic = 'force-static' // Suggested fix against full page crash
+export const revalidate = false       // Suggested fix against full page crash
+
 import type { Metadata } from 'next'
 import './styles/globals.scss'
 import Navbar from '@/app/components/Navbar'

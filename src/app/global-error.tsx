@@ -1,30 +1,17 @@
-'use client';
+'use client'
 
-import React from 'react';
-
-export default function GlobalError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
-    // Optional: send to your logger here
-    if (typeof window !== 'undefined') {
-        // Replace with your logging endpoint
-        console.error('[global-error]', { message: error?.message, stack: error?.stack, digest: error?.digest });
-    }
-
+export default function GlobalError({ error, reset }: { error: Error & { digest?: string }, reset: () => void }) {
     return (
-        <html lang="nl">
-        <body style={{ margin: 0, fontFamily: 'system-ui, sans-serif', background: '#000', color: '#fff' }}>
-        <div style={{ padding: '48px 24px', maxWidth: 720 }}>
-            <h1 style={{ margin: 0, fontSize: 28 }}>Er ging iets mis</h1>
-            <p style={{ opacity: 0.8, marginTop: 12 }}>
-                Er is een fout opgetreden tijdens het laden. Probeer het opnieuw.
-            </p>
-            <button
-                onClick={() => reset()}
-                style={{ marginTop: 20, padding: '10px 16px', borderRadius: 8, border: 0, cursor: 'pointer' }}
-            >
+        <html>
+        <body style={{display:'grid',placeItems:'center',minHeight:'100dvh',color:'#fff',background:'#0b1020'}}>
+        <div style={{maxWidth:560,padding:24}}>
+            <h1 style={{fontSize:28,margin:'0 0 8px'}}>Er ging iets mis</h1>
+            <p style={{opacity:.8,margin:'0 0 16px'}}>Er is een fout opgetreden tijdens het laden.</p>
+            <button onClick={() => reset()} style={{padding:'10px 14px',borderRadius:10,fontWeight:700}}>
                 Opnieuw laden
             </button>
         </div>
         </body>
         </html>
-    );
+    )
 }
