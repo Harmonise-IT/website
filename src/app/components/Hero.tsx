@@ -99,7 +99,15 @@ export default function Hero() {
                     >
                         <source src={video.srcWebm} type="video/webm" />
                         <source src={video.srcMp4} type="video/mp4" />
-                        <Image src={video.poster} alt="" fill priority style={{ objectFit: 'cover' }} />
+                        <Image
+                            src={video.poster}
+                            alt=""
+                            fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 100vw"
+                            style={{ objectFit: 'cover' }}
+                        />
+
                     </video>
                 ))}
                 <div className={styles.vignette} />

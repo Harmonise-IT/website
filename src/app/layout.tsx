@@ -53,7 +53,6 @@ const font = Montserrat({
     adjustFontFallback: true
 })
 
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className={font.className}>

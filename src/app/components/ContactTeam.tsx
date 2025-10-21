@@ -31,7 +31,6 @@ export default function ContactTeam({
                     height={256}
                     className={styles.photo}
                     sizes="(max-width: 560px) 220px, 256px"
-                    quality={92}
                     priority
                 />
             </div>

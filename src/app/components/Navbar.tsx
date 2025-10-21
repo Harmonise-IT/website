@@ -81,6 +81,7 @@ export default function Navbar() {
                             width={64}
                             height={64}
                             alt="Harmonise IT logo"
+                            loading="eager"
                         />
                         Harmonise IT
                     </Link>
