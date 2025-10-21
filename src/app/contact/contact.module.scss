@@ -26,6 +26,21 @@
   transition: opacity .5s ease, transform .55s cubic-bezier(.22,1,.36,1);
 }
 
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.error {
+  margin: .5rem 0 0;
+  color: #ff7777;
+  font-size: .95rem;
+}
+
+
 .in.bigCard, .bigCard.in { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 980px) {
@@ -193,4 +208,46 @@
 @keyframes drawCheck {
   to { stroke-dashoffset: 0; }
 }
+
+/* Success banner */
+.banner {
+  background: rgba(118, 201, 59, 0.14);
+  border: 1px solid rgba(118, 201, 59, 0.6);
+  color: #b9f29a;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+/* label row with counter */
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.counter {
+  font-size: 12px;
+  opacity: .7;
+}
+.muted { opacity: .6; font-weight: 400; }
+
+/* error field state */
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: rgba(255, 120, 120, .7);
+  box-shadow: 0 0 0 2px rgba(255, 120, 120, .15);
+}
+
+/* submit spinner */
+.iconWrap { display: inline-flex; width: 16px; height: 16px; }
+.spinner {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
 
