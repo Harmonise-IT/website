@@ -1,9 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+
+export const dynamic = 'force-dynamic';
 
 const nextConfig: NextConfig = {
     reactCompiler: true,
-    output: 'export',              // produce a fully static build in /out
-    images: { unoptimized: true }, // makes <Image/> work on static hosts
 };
 
 export default nextConfig;
