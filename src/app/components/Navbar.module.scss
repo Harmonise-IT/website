@@ -261,7 +261,7 @@ $black: var(--primary-background);
 .asideCta {
   display: inline-block;
   background: $white;
-  color: $ink;
+  color: var(--primary-background);
   padding: 8px 12px;
   border-radius: 10px;
   text-decoration: none;
