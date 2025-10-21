@@ -1,7 +1,7 @@
 /* components/Navbar.module.scss */
 $white: #fff;
 $ink: #0b1020;
-$black: var(--secondary-background);
+$black: var(--primary-background);
 
 /* ---------- Header ---------- */
 .header {
@@ -28,13 +28,13 @@ $black: var(--secondary-background);
 }
 
 .isScrolled {
-  background: color-mix(in srgb, var(--secondary-background) 88%, transparent);
+  background: color-mix(in srgb, var(--primary-background) 88%, transparent);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(6px);
 }
 
 .isHovering {
-  background: color-mix(in srgb, var(--secondary-background) 96%, white 4%);
+  background: color-mix(in srgb, var(--primary-background) 96%, white 4%);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
   outline: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -123,7 +123,7 @@ $black: var(--secondary-background);
 
 .linkItem:hover,
 .active .linkItem {
-  background: color-mix(in srgb, var(--secondary-background) 94%, white 6%);
+  background: color-mix(in srgb, var(--primary-background) 94%, white 6%);
   color: $white;
 }
 
@@ -169,7 +169,7 @@ $black: var(--secondary-background);
   width: max-content;
   max-width: min(1100px, 92vw);
 
-  background: color-mix(in srgb, var(--secondary-background) 92%, transparent);
+  background: color-mix(in srgb, var(--primary-background) 92%, transparent);
   color: $white;
   border-radius: 14px;
   box-shadow:
@@ -242,7 +242,7 @@ $black: var(--secondary-background);
 /* ---------- Aside card ---------- */
 .aside {
   inline-size: 256px;
-  background: color-mix(in srgb, var(--secondary-background) 86%, white 14%);
+  background: color-mix(in srgb, var(--primary-background) 86%, white 14%);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   padding: 16px;
@@ -275,7 +275,7 @@ $black: var(--secondary-background);
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background: color-mix(in srgb, var(--secondary-background) 80%, white 20%);
+  background: color-mix(in srgb, var(--primary-background) 80%, white 20%);
   cursor: pointer;
 }
 
@@ -290,7 +290,7 @@ $black: var(--secondary-background);
 .panel {
   position: fixed;
   inset: 72px 0 0 0;
-  background: color-mix(in srgb, var(--secondary-background) 94%, transparent);
+  background: color-mix(in srgb, var(--primary-background) 94%, transparent);
   color: $white;
   transform: translateY(-8px);
   opacity: 0;
