@@ -13,18 +13,18 @@ type Item = {
 }
 
 const Shield: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F4C061" strokeWidth="1.5" {...props}>
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#EBA33B" strokeWidth="1.5" {...props}>
         <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" />
     </svg>
 )
 const Cog: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F4C061" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#EBA33B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
         <circle cx="12" cy="12" r="3" />
         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .7.4 1.34 1.02 1.65.32.17.69.26 1.06.26H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
     </svg>
 )
 const Person: Item['Icon'] = (props) => (
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F4C061" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#EBA33B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
         <circle cx="12" cy="8" r="4" />
         <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
     </svg>

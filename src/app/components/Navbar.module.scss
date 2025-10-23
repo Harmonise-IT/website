@@ -146,8 +146,8 @@ $black: var(--primary-background);
 
 /* ---------- CTA ---------- */
 .cta {
-  background: $white;
-  color: $ink;
+  background: var(--primary-color);
+  color: var(--primary-background);
   padding: 10px 14px;
   border-radius: 10px;
   text-decoration: none;

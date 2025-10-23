@@ -22,7 +22,7 @@ export default function VennDiagram({
                                         size = 764, // bigger canvas
                                         animate = true,
                                         labels = { a: 'Menselijk', b: 'Beleidsmatig', c: 'Technisch', ab: '', bc: '', ac: '', abc: 'Opgave' },
-                                        colors = { a: '#F4C061', b: '#F4C061', c: '#F4C061' },
+                                        colors = { a: '#EBA33B', b: '#EBA33B', c: '#EBA33B' },
                                         stroke = 'rgba(0,0,0,0.28)',
                                         strokeWidth = 2,
                                         className,
