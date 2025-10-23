@@ -9,27 +9,34 @@ import Navbar from '@/app/components/Navbar'
 import { Montserrat } from 'next/font/google'
 import Footer from '@/app/components/Footer'
 
+const SITE = 'https://harmonise.nl'
+const OG = `${SITE}/og-image.png`
+
 export const metadata: Metadata = {
-    metadataBase: new URL('https://harmonise.nl'),
+    metadataBase: new URL(SITE),
+
     title: {
         default: 'Harmonise IT',
         template: '%s | Harmonise IT',
     },
     description: 'Grip op uw digitale landschap.',
-    alternates: { canonical: '/' },
+    alternates: { canonical: SITE },
+
     openGraph: {
         type: 'website',
-        url: '/',
+        url: SITE,
         siteName: 'Harmonise IT',
         title: 'Harmonise IT',
         description: 'Grip op uw digitale landschap.',
-        images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Harmonise IT' }],
+        images: [
+            { url: OG, width: 1200, height: 630, alt: 'Harmonise IT' },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Harmonise IT',
         description: 'Grip op uw digitale landschap.',
-        images: ['/og-image.png'],
+        images: [OG],
     },
 
     manifest: '/site.webmanifest',
