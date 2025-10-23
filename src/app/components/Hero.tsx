@@ -116,6 +116,22 @@ export default function Hero() {
                     </h1>
                 </div>
             </div>
+
+            <div className={styles.scrollIndicator} aria-hidden="true">
+                <span className={styles.visuallyHidden}>Scroll</span>
+                <div className={styles.scrollCircle}>
+                    <svg
+                        className={styles.scrollArrow}
+                        viewBox="0 0 24 24"
+                        width="32"
+                        height="32"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <path d="M6 10l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </div>
+            </div>
         </section>
     )
 }

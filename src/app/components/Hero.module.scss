@@ -169,3 +169,60 @@
   left: 0; top: 0;
 }
 
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(32px, 6vh, 32px);
+  z-index: 3; /* above videos + vignette + gradient */
+  pointer-events: none; /* purely decorative */
+}
+
+.scrollCircle {
+  --size: 48px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  border: 2px solid var(--primary-color);
+  display: grid;
+  place-items: center;
+  animation: bounce 1.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.scrollArrow {
+  display: block;
+  color: var(--primary-color); /* arrow inherits this via currentColor */
+}
+
+@media (max-width: 560px) {
+  .scrollCircle {
+    --size: 32px;
+  }
+
+  .scrollArrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Gentle bounce */
+@keyframes bounce {
+  0%, 100%   { transform: translateY(0); }
+  50%        { transform: translateY(12px); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scrollCircle { animation: none; }
+}
+
+/* Visually hidden helper for a11y */
+.visuallyHidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
