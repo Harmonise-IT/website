@@ -3,7 +3,7 @@
 export const dynamic = 'force-static' // Suggested fix against full page crash
 export const revalidate = false       // Suggested fix against full page crash
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './styles/globals.scss'
 import Navbar from '@/app/components/Navbar'
 import { Montserrat } from 'next/font/google'
@@ -23,14 +23,7 @@ export const metadata: Metadata = {
         siteName: 'Harmonise IT',
         title: 'Harmonise IT',
         description: 'Grip op uw digitale landschap.',
-        images: [
-            {
-                url: '/og-image.png',
-                width: 1200,
-                height: 630,
-                alt: 'Harmonise IT',
-            },
-        ],
+        images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Harmonise IT' }],
     },
     twitter: {
         card: 'summary_large_image',
@@ -38,10 +31,30 @@ export const metadata: Metadata = {
         description: 'Grip op uw digitale landschap.',
         images: ['/og-image.png'],
     },
+
+    manifest: '/site.webmanifest',
+
     icons: {
-        icon: '/favicon.ico',
+        icon: [
+            { url: '/favicon.ico' },
+            { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+            { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        ],
+        apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+        shortcut: ['/favicon.ico'],
     },
+
     robots: { index: true, follow: true },
+
+    appleWebApp: {
+        capable: true,
+        title: 'Harmonise IT',
+        statusBarStyle: 'black-translucent',
+    },
+}
+
+export const viewport: Viewport = {
+    themeColor: '#1E2535',
 }
 
 const font = Montserrat({

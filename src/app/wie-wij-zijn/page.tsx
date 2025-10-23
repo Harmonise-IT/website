@@ -2,6 +2,7 @@ import ContentBlock from '@/app/components/ContentBlock'
 import Map from '@/app/components/Map'
 import s from './WieWijZijnPage.module.scss'
 import type { Metadata } from 'next'
+import VennDiagram from '@/app/components/VennDiagram'
 
 export const metadata: Metadata = {
     title: 'Harmonise IT | Wie wij zijn',
@@ -22,6 +23,8 @@ export default function WieWijZijnPage() {
                 <p>
                     Wij zijn de ontwerpers en bouwers die samen met u werken aan duurzame, adaptieve oplossingen, zodat beleid en technologie elkaar versterken.
                 </p>
+
+                {/*<VennDiagram/>*/}
 
                 <ContentBlock
                     id="onze-visie"
