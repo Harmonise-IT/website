@@ -6,9 +6,9 @@ import styles from './Hero.module.scss'
 import RotatingWords from './RotatingWords'
 
 const VIDEOS = [
-    { srcWebm: '/hero/hero-video-1.webm', srcMp4: '/hero/hero-video-1.mp4', poster: '/hero/hero-image-1.png' },
-    { srcWebm: '/hero/hero-video-2.webm', srcMp4: '/hero/hero-video-2.mp4', poster: '/hero/hero-image-2.png' },
-    { srcWebm: '/hero/hero-video-3.webm', srcMp4: '/hero/hero-video-3.mp4', poster: '/hero/hero-image-3.png' },
+    { srcWebm: '/hero/hero-video-1.webm', srcMp4: '/hero/hero-video-1.mp4', poster: '/hero/hero-image-1.webp' },
+    { srcWebm: '/hero/hero-video-2.webm', srcMp4: '/hero/hero-video-2.mp4', poster: '/hero/hero-image-2.webp' },
+    { srcWebm: '/hero/hero-video-3.webm', srcMp4: '/hero/hero-video-3.mp4', poster: '/hero/hero-image-3.webp' },
 ]
 
 export default function Hero() {
@@ -88,26 +88,16 @@ export default function Hero() {
                 {VIDEOS.map((video, idx) => (
                     <video
                         key={idx}
-                        ref={(el) => {
-                            videoRefs.current[idx] = el;
-                        }}
+                        ref={(el) => { videoRefs.current[idx] = el; }}
                         className={`${styles.video} ${idx === activeIndex ? styles.active : ''}`}
                         autoPlay
                         muted
                         playsInline
                         poster={video.poster}
+                        preload={idx === activeIndex ? 'metadata' : 'none'}
                     >
                         <source src={video.srcWebm} type="video/webm" />
                         <source src={video.srcMp4} type="video/mp4" />
-                        <Image
-                            src={video.poster}
-                            alt=""
-                            fill
-                            priority
-                            sizes="(max-width: 768px) 100vw, 100vw"
-                            style={{ objectFit: 'cover' }}
-                        />
-
                     </video>
                 ))}
                 <div className={styles.vignette} />
