@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         default: 'Harmonise IT',
         template: '%s | Harmonise IT',
     },
-    description: 'Grip op uw digitale landschap.',
+    description: 'Beleid en technologie in harmonie',
     alternates: { canonical: SITE },
 
     openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: SITE,
         siteName: 'Harmonise IT',
         title: 'Harmonise IT',
-        description: 'Grip op uw digitale landschap.',
+        description: 'Beleid en technologie in harmonie',
         images: [
             { url: OG, width: 1200, height: 630, alt: 'Harmonise IT' },
         ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Harmonise IT',
-        description: 'Grip op uw digitale landschap.',
+        description: 'Beleid en technologie in harmonie',
         images: [OG],
     },
 
