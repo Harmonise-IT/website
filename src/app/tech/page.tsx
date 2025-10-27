@@ -61,7 +61,7 @@ We combineren technische vakkennis met inzicht in de publieke context, zodat tec
                         name="Yoeri Moens"
                         role="Techniek, Strategie & Beheer"
                         email="y.moens@harmonise.nl"
-                        phone="+31 6 4554 0216"
+                        phone="+31 6 54657334"
                         photoSrc="/team-yoeri.jpeg"
                         linkLinkedIn="https://www.linkedin.com/in/yoeri-moens"
                     />
