@@ -32,6 +32,8 @@ type MediaImage = {
 type MediaNode = {
     kind: 'node'
     node: React.ReactNode
+    nodeClassName?: string
+    ariaLabel?: string
 }
 
 export type ContentBlockProps = {
@@ -126,15 +128,24 @@ export default function ContentBlock({
 
                         {lead && <p className={styles.lead}>{lead}</p>}
 
-                        {!!media && media.kind === 'image' && forceShowMediaOnMobile ? (
-                            <img
-                                className={[styles.img, styles.mobileOnly].join(' ')}
-                                src={media.src}
-                                alt={media.alt}
-                                width={media.width}
-                                height={media.height}
-                                loading={media.priority ? 'eager' : 'lazy'}
-                            />
+                        {(!!media && forceShowMediaOnMobile) ? (
+                            media.kind === 'image' ? (
+                                <img
+                                    className={[styles.img, styles.mobileOnly].join(' ')}
+                                    src={media.src}
+                                    alt={media.alt}
+                                    width={media.width}
+                                    height={media.height}
+                                    loading={media.priority ? 'eager' : 'lazy'}
+                                />
+                            ) : media.kind === 'node' ? (
+                                <div
+                                    className={[styles.node, styles.mobileOnly, media.nodeClassName || ''].join(' ')}
+                                    aria-label={media.ariaLabel}
+                                >
+                                    {media.node}
+                                </div>
+                            ) : null
                         ) : null}
 
                         {!! points?.length && (
@@ -185,7 +196,7 @@ export default function ContentBlock({
                                 styles.visual,
                                 inView ? styles.in : '',
                             ].join(' ')}>
-                            <div className={styles.frame}>
+                            <div className={media.kind !== 'node' ? styles.frame : ''}>
                                 {media.kind === 'video' && (
                                     <video
                                         ref={videoRef}
@@ -211,9 +222,16 @@ export default function ContentBlock({
                                     />
                                 )}
 
-                                {media.kind === 'node' && media.node}
+                                {media.kind === 'node' && (
+                                    <div
+                                        className={[styles.node, media.nodeClassName || ''].join(' ')}
+                                        aria-label={media.ariaLabel}
+                                    >
+                                        {media.node}
+                                    </div>
+                                )}
 
-                                <div className={styles.glow} aria-hidden/>
+                                <div className={media.kind !== 'node' ? styles.glow : ''} aria-hidden/>
                             </div>
                         </div>
                     )}

@@ -1,44 +1,42 @@
 .container {
-  --venn-size: 764px;
+  --venn-size: 764px;          /* acts as a max target size */
   --venn-a: #5D90FF;
   --venn-b: #E46694;
   --venn-c: #63C378;
   --venn-stroke: rgba(0, 0, 0, 0.28);
   --venn-stroke-width: 2;
 
-  width: var(--venn-size);
-  height: var(--venn-size);
+  /* was fixed width/height */
+  width: min(100%, var(--venn-size));
+  max-width: 100%;
+  aspect-ratio: 1 / 1;         /* keep it square */
+  height: auto;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
 .venn {
   display: block;
+  width: 100%;
+  height: 100%;
   overflow: visible;
   will-change: transform;
   transition: transform 250ms ease;
 }
 
-.labels text {
-  fill: var(--primary-background);
-}
-
-.label {
-  font-size: 32px;
-  font-weight: 800;
-}
-
-.intersection {
-  font-size: 32px;
-  font-weight: 600;
-}
-
-.center {
-  font-size: 24px;
-  font-weight: 800;
-}
+/* The text scales with the SVG because of the viewBox,
+   so no font-size changes needed. Keep your existing rules. */
+.labels text { fill: var(--primary-background); }
+.label { font-size: 32px; font-weight: 800; }
+.intersection { font-size: 32px; font-weight: 600; }
+.center { font-size: 24px; font-weight: 800; }
 
 .animate {
   @media (prefers-reduced-motion: reduce) {
@@ -47,7 +45,7 @@
   }
 }
 
-/* Visually hidden (for figcaption) */
+/* Visually hidden (unchanged) */
 .srOnly {
   position: absolute !important;
   width: 1px; height: 1px;

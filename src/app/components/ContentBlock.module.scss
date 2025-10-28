@@ -2,7 +2,7 @@
 
 .wrap {
   color: #fff;
-  padding: 32px 0;
+  padding: 0 0;
 }
 
 .grid {
@@ -238,10 +238,19 @@
   }
 }
 
-/* default: hide the mobile-inline image */
-.mobileOnly { display: none; }
+/* Ensures embedded components scale nicely inside the frame */
+.node {
+  display: block;
+  width: 100%;
+  height: auto;
 
-/* show it only on mobile */
-@media (max-width: 640px) {
-  .mobileOnly { display: block; margin: 12px 0; }
+  /* If the child is an SVG/figure that’s responsive, this is enough.
+     If it exposes a className prop, pass `nodeClassName` and target it here. */
+}
+
+.mobileOnly {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobileOnly { display: block; }
 }

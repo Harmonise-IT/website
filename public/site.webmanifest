@@ -1,12 +1,17 @@
 {
+  "id": "/",
   "name": "Harmonise IT",
   "short_name": "Harmonise IT",
   "description": "Beleid en technologie in harmonie.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#1E2535",
   "theme_color": "#1E2535",
+  "lang": "nl",
+  "dir": "ltr",
+  "categories": ["software", "tech", "it", "consultancy", "advies", "strategie"],
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -19,10 +24,32 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "lang": "nl",
-  "dir": "ltr",
-  "categories": ["business", "productivity", "utilities"],
-  "orientation": "portrait"
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "url": "/"
+    }
+  ],
+  "prefer_related_applications": false
 }

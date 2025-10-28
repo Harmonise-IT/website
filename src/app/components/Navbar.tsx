@@ -77,7 +77,7 @@ export default function Navbar() {
                     <Link href="/" className={styles.brand}>
                         <Image
                             className={styles.heroLogo}
-                            src="/hit-logo-white-transparent.png"
+                            src="/hit-logo-yellow-transparent.png"
                             width={64}
                             height={64}
                             alt="Harmonise IT logo"

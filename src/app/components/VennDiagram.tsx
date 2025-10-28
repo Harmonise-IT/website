@@ -21,7 +21,7 @@ type VennDiagramProps = {
 export default function VennDiagram({
                                         size = 764, // bigger canvas
                                         animate = true,
-                                        labels = { a: 'Menselijk', b: 'Beleidsmatig', c: 'Technisch', ab: '', bc: '', ac: '', abc: 'Opgave' },
+                                        labels = { a: 'Mens', b: 'Beleid', c: 'Techniek', ab: '', bc: '', ac: '', abc: 'Opgave' },
                                         colors = { a: '#EBA33B', b: '#EBA33B', c: '#EBA33B' },
                                         stroke = 'rgba(0,0,0,0.28)',
                                         strokeWidth = 2,
@@ -65,8 +65,8 @@ export default function VennDiagram({
         >
             <svg
                 className={s.venn}
-                width={size}
-                height={size}
+                width="100%"
+                height="100%"
                 viewBox={`0 0 ${size} ${size}`}
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -106,7 +106,7 @@ export default function VennDiagram({
                             <animateTransform
                                 attributeName="transform"
                                 type="translate"
-                                dur="6s"
+                                dur="12s"
                                 values="0 0; 20 20; 0 40; -20 20; 0 0; -20 -20; 0 -40; 20 -20; 0 0"
                                 repeatCount="indefinite"
                             />
@@ -129,8 +129,8 @@ export default function VennDiagram({
                             <animateTransform
                                 attributeName="transform"
                                 type="translate"
-                                dur="6s"
-                                values="0 0; -25 15; -40 0; -25 -15; 0 0; 25 -15; 40 0; 25 15; 0 0"
+                                dur="12s"
+                                values="0 0; -20 15; 0 -20; -15 -15; 0 0; 25 -15; 40 0; 25 15; 0 0"
                                 repeatCount="indefinite"
                             />
 
@@ -153,7 +153,7 @@ export default function VennDiagram({
                             <animateTransform
                                 attributeName="transform"
                                 type="translate"
-                                dur="6s"
+                                dur="12s"
                                 values="0 0; 15 -15; 0 -30; -15 -15; 0 0; -15 15; 0 30; 15 15; 0 0"
                                 repeatCount="indefinite"
                             />
@@ -164,10 +164,10 @@ export default function VennDiagram({
                 {/* Labels */}
                 <g className={s.labels}>
                     {labels.a && (
-                        <text x={A.cx + r * 0.1} y={A.cy - r * 1.2} className={s.label}>{labels.a}</text>
+                        <text x={A.cx + r * 0.3} y={A.cy - r * 1.2} className={s.label}>{labels.a}</text>
                     )}
                     {labels.b && (
-                        <text x={B.cx + r * 0.9} y={A.cy + r * 0.4} className={s.label} textAnchor="end">{labels.b}</text>
+                        <text x={B.cx + r * 0.8} y={A.cy + r * 0.4} className={s.label} textAnchor="end">{labels.b}</text>
                     )}
                     {labels.c && (
                         <text x={A.cx - r * 0.4} y={A.cy + r * 0.4} className={s.label} textAnchor="middle">{labels.c}</text>

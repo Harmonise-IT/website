@@ -47,8 +47,11 @@ export const metadata: Metadata = {
             { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
             { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
         ],
-        apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-        shortcut: ['/favicon.ico'],
+        apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+        other: [
+            { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#0B1B34" }, // brand navy for Safari pinned tabs
+        ],
+        shortcut: ["/favicon.ico"],
     },
 
     robots: { index: true, follow: true },
@@ -61,7 +64,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-    themeColor: '#1E2535',
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+        { media: "(prefers-color-scheme: dark)", color: "#0F1F33" },
+    ],
 }
 
 const font = Montserrat({

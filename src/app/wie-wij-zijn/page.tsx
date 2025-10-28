@@ -24,8 +24,6 @@ export default function WieWijZijnPage() {
                     Wij zijn de ontwerpers en bouwers die samen met u werken aan duurzame, adaptieve oplossingen, zodat beleid en technologie elkaar versterken.
                 </p>
 
-                {/*<VennDiagram/>*/}
-
                 <ContentBlock
                     id="onze-visie"
                     kicker="Wie wij zijn"
@@ -35,17 +33,16 @@ export default function WieWijZijnPage() {
                     className="driePerspectieven"
                     lead="Bij Harmonise IT geloven we dat duurzame digitale ontwikkeling ontstaat daar waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
                     points={[
-                        '<strong class="accent">Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burgers en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
-                        '<strong class="accent">Beleidsmatig →</strong> De overheid opereert in een omgeving die continu verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Systemen moeten vanaf het begin adaptief worden ingericht om rekening te houden met deze ontwikkelingen. Daarbij houden we rekening met gezamenlijke open standaarden.',
-                        '<strong class="accent">Technisch →</strong> Software en infrastructuur vormen vormen de technische basis voor de uitvoering van beleid en werkprocessen. Wij ontwerpen en bouwen systemen die betrouwbaar, schaalbaar en aanpasbaar zijn.',
+                        '<strong class="accentSecondary">Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burgers en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
+                        '<strong class="accentSecondary">Beleidsmatig →</strong> De overheid opereert in een omgeving die continu verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Systemen moeten vanaf het begin adaptief worden ingericht om rekening te houden met deze ontwikkelingen. Daarbij houden we rekening met gezamenlijke open standaarden.',
+                        '<strong class="accentSecondary">Technisch →</strong> Software en infrastructuur vormen vormen de technische basis voor de uitvoering van beleid en werkprocessen. Wij ontwerpen en bouwen systemen die betrouwbaar, schaalbaar en aanpasbaar zijn.',
                     ]}
                     afterPoints="Door deze drie elementen in samenhang te ontwikkelen, creëren we harmonieuze IT: technologie die mensen ondersteunt, beleid versterkt en maatschappelijke doelen dichterbij brengt."
                     media={{
-                        kind: 'image',
-                        src: '/drie-perspectieven.jpeg',
-                        alt: 'Drie perspectieven: menselijk, beleidsmatig, technisch',
-                        width: 256,
-                        height: 256,
+                        kind: 'node',
+                        node: <VennDiagram className="w-100" />,
+                        nodeClassName: 'w-100',
+                        ariaLabel: 'Venn-diagram drie perspectieven'
                     }}
                     forceShowMediaOnMobile={true}
                     mediaSide="left"
