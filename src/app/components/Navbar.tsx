@@ -14,7 +14,7 @@ const links = [
 
 const mobileLinks = [
     { key: 'mobile-datagedreven-werken' as const, label: 'Datagedreven werken', href: '/strategie-en-organisatie#datagedreven-werken' },
-    { key: 'mobile-inrichting' as const, label: 'Inrichting', href: '/strategie-en-organisatie#compliance' },
+    { key: 'mobile-compliance' as const, label: 'Compliance', href: '/strategie-en-organisatie#compliance' },
     { key: 'mobile-software-op-maat' as const, label: 'Software op maat', href: '/tech#software-op-maat' },
     { key: 'mobile-oplossingen', label: 'Integraties', href: '/tech#integraties' },
     { key: 'mobile-wie-wij-zijn', label: 'Wie wij zijn', href: '/wie-wij-zijn' },
