@@ -13,8 +13,8 @@ const links = [
 ]
 
 const mobileLinks = [
-    { key: 'mobile-strategie' as const, label: 'Strategie', href: '/strategie-en-advies#strategie' },
-    { key: 'mobile-inrichting' as const, label: 'Inrichting', href: '/strategie-en-advies#inrichting' },
+    { key: 'mobile-datagedreven-werken' as const, label: 'Datagedreven werken', href: '/strategie-en-organisatie#datagedreven-werken' },
+    { key: 'mobile-inrichting' as const, label: 'Inrichting', href: '/strategie-en-organisatie#compliance' },
     { key: 'mobile-software-op-maat' as const, label: 'Software op maat', href: '/tech#software-op-maat' },
     { key: 'mobile-oplossingen', label: 'Integraties', href: '/tech#integraties' },
     { key: 'mobile-wie-wij-zijn', label: 'Wie wij zijn', href: '/wie-wij-zijn' },
@@ -157,9 +157,9 @@ export default function Navbar() {
 function ProductsMenu() {
     return (
         <div className={styles.menuGrid}>
-            <Column title="Strategie & advies" href="/strategie-en-advies">
-                <Link href="/strategie-en-advies#strategie">Strategie</Link>
-                <Link href="/strategie-en-advies#inrichting">Inrichting</Link>
+            <Column title="Strategie & organisatie" href="/strategie-en-organisatie">
+                <Link href="/strategie-en-organisatie#datagedreven-werken">Datagedreven werken</Link>
+                <Link href="/strategie-en-organisatie#compliance">Compliance</Link>
             </Column>
             <Column title="Tech" href="/tech">
                 <Link href="/tech#software-op-maat">Software op maat</Link>

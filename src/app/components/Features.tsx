@@ -32,10 +32,10 @@ const Person: Item['Icon'] = (props) => (
 
 const ITEMS: Item[] = [
     {
-        title: 'Strategie & advies',
+        title: 'Strategie & organisatie',
         body: 'Wij brengen structuur, richting en samenhang in het digitale landschap. Van datastrategie tot governance en samenwerking: wij slaan de brug tussen beleid en technologie.',
         Icon: Shield,
-        href: '/strategie-en-advies',
+        href: '/strategie-en-organisatie',
     },
     {
         title: 'Tech',

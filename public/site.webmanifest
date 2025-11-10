@@ -11,7 +11,7 @@
   "theme_color": "#1E2535",
   "lang": "nl",
   "dir": "ltr",
-  "categories": ["software", "tech", "it", "consultancy", "advies", "strategie"],
+  "categories": ["software", "tech", "it", "consultancy", "organisatie", "advies", "strategie"],
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

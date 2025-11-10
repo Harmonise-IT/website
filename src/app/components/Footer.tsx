@@ -16,8 +16,8 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     {
         title: 'Wat wij doen',
         links: [
-            { href: '/strategie-en-advies#strategie', label: 'Strategie' },
-            { href: '/strategie-en-advies#inrichting', label: 'Inrichting' },
+            { href: '/strategie-en-organisatie#datagedreven-werken', label: 'Datagedreven werken' },
+            { href: '/strategie-en-organisatie#compliance', label: 'Compliance' },
             { href: '/tech#software-op-maat', label: 'Software op maat' },
             { href: '/tech#integraties', label: 'Integraties' },
         ],
