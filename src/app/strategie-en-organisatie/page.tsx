@@ -18,6 +18,7 @@ export default function StrategieEnOrganisatiePage() {
                     ariaLabel="strategie"
                     title="Datagedreven"
                     accent="werken"
+                    flipAccent={true}
                     lead="Wij helpen overheden om inzichten uit data te vertalen naar beter beleid en een effectievere uitvoering. Dat vraagt om betrouwbare data en om medewerkers die weten hoe ze data kunnen gebruiken."
                     points={[
                         '<strong>Organisatie en werkprocessen →</strong> Wij ondersteunen overheden bij het verbeteren van informatiestromen en het op elkaar aansluiten van systemen, randvoorwaarden en werkprocessen. Wij helpen bij opgaven als de uitvoering van de Wet open overheid (Woo), de Omgevingswet en zaakgericht werken.',

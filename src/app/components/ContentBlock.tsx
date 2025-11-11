@@ -54,6 +54,7 @@ export type ContentBlockProps = {
     media?: MediaVideo | MediaImage | MediaNode
     mediaSide?: 'left' | 'right'   // default 'right'
     forceShowMediaOnMobile?: boolean
+    flipAccent?: boolean
 }
 
 export default function ContentBlock({
@@ -71,6 +72,7 @@ export default function ContentBlock({
                                          media,
                                          mediaSide = 'right',
                                          forceShowMediaOnMobile = false,
+                                         flipAccent = false,
                                      }: ContentBlockProps) {
     const sectionRef = useRef<HTMLElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
@@ -122,13 +124,15 @@ export default function ContentBlock({
                         {kicker && <div className={styles.kicker}>{kicker}</div>}
 
                         <h2 className={styles.title}>
-                            {title}{' '}
-                            {accent ? <span className={styles.accent}>{accent}</span> : null}
+                            <span className={flipAccent ? styles.accent : undefined}>{title}</span>{' '}
+                            {accent ? (
+                                <span className={flipAccent ? undefined : styles.accent}>{accent}</span>
+                            ) : null}
                         </h2>
 
                         {lead && <p className={styles.lead}>{lead}</p>}
 
-                        {(!!media && forceShowMediaOnMobile) ? (
+                        {!!media && forceShowMediaOnMobile ? (
                             media.kind === 'image' ? (
                                 <img
                                     className={[styles.img, styles.mobileOnly].join(' ')}
@@ -211,7 +215,6 @@ export default function ContentBlock({
                                 )}
 
                                 {media.kind === 'image' && (
-                                    // Using plain <img> keeps the component light & generic.
                                     <img
                                         className={styles.img}
                                         src={media.src}
