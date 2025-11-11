@@ -18,12 +18,10 @@ export default function TechPage() {
                     ariaLabel="software-op-maat"
                     title="Applicaties"
                     accent="waar je op kunt rekenen"
-                    lead="Wij ontwerpen en maken software die publieke organisaties echt helpen.
-Onze oplossingen zijn niet theoretisch, maar tastbaar: professionele software die betrouwbaar, veilig en gebruiksvriendelijk is.
-We combineren technische vakkennis met inzicht in de publieke context, zodat techniek het einddoel ondersteunt."
+                    lead="Wij ontwerpen en maken maatwerksoftware die voorziet in de specifieke behoeften van uw organisatie."
                     points={[
-                        '<strong>Apps & Tools →</strong> Wij ontwikkelen passende oplossingen voor uw digitale uitdagingen. Samen met u maken wij de maatwerksoftware die voorziet in uw behoeften.',
-                        '<strong>Dashboards →</strong> Wij ontwikkelen dashboards en analysemethoden waarmee organisaties beter kunnen sturen op maatschappelijke resultaten.',
+                        '<strong>Apps & Tools →</strong> Wij bouwen maatwerkapplicaties en tools die aansluiten op de bestaande informatievoorziening van gemeenten. Daarbij letten we op een heldere architectuur, goed beheerbare code en veilige koppelingen met andere systemen.',
+                        '<strong>Dashboards →</strong> Wij ontwikkelen dashboards en analysemethoden met een betrouwbare data-architectuur waarmee we organisaties ondersteunen om datagedreven te werken.',
                     ]}
                     ctas={[
                         { label: 'Plan een gesprek', href: '/contact', variant: 'primary' },
@@ -45,7 +43,6 @@ We combineren technische vakkennis met inzicht in de publieke context, zodat tec
                     lead="Het veilig delen van data tussen alle relevante systemen wordt steeds belangrijker. Dit geldt voor uitwisseling van data tussen overheidsorganisaties, maar ook voor verschillende interne applicaties. Wij bouwen integraties die naadloze data-uitwisseling tussen deze systemen mogelijk maakt."
                     points={[
                         '<strong>API-koppelingen →</strong> Integraties met alle relevante systemen.',
-                        '<strong>Microservices →</strong> Kleinschalige oplossingen die specifieke functionaliteit bieden.',
                         '<strong>Automatisering →</strong> Workflows die de digitale overheid ondersteunen.',
                     ]}
                     media={{
