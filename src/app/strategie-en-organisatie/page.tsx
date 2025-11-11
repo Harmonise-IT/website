@@ -21,7 +21,7 @@ export default function StrategieEnOrganisatiePage() {
                     flipAccent={true}
                     lead="Wij helpen overheden om inzichten uit data te vertalen naar beter beleid en een effectievere uitvoering. Dat vraagt om betrouwbare data en om medewerkers die weten hoe ze data kunnen gebruiken."
                     points={[
-                        '<strong>Architectuur en werkprocessen →</strong> Wij ondersteunen overheden bij het verbeteren van datastromen en het op elkaar afstemmen van systemen en werkprocessen. Toegangkelijkheid voor medewerkers en aansluiting bij cultuur is hierbij van belang. Zo wordt datagedreven werken een duurzaam onderdeel van de organisatie.',
+                        '<strong>Architectuur en werkprocessen →</strong> Wij ondersteunen overheden bij het verbeteren van datastromen en het op elkaar afstemmen van systemen en werkprocessen. Toegankelijkheid voor medewerkers en aansluiting bij cultuur is hierbij cruciaal. Zo wordt datagedreven werken een duurzaam onderdeel van de organisatie.',
                         '<strong>Rapportages en dashboards →</strong> Wij ontwikkelen overzichtelijke dashboards en rapportages die toepasbaar zijn in beleid en uitvoering. We zorgen voor betrouwbare datastromen, voor passende risico- en analysemodellen en visuele weergaven die aansluiten op de informatiebehoefte van teams en management. Daarnaast begeleiden we organisaties bij het interpreteren en gebruiken van deze inzichten in dagelijkse besluitvorming.',
                     ]}
                     ctas={[
