@@ -1,0 +1,40 @@
+.section {
+  padding: 84px 0 120px;
+  background: var(--primary-background);
+  color: #fff;
+
+  /* subtle dotted field (same vibe as your app) */
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.powerbiWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;    // matches your design
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 16:9-ish aspect ratio; tweak to taste (e.g. 60%) */
+.powerbiWrapper::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;  // (height / width) * 100
+}
+
+.powerbiFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional: make it a bit taller on mobile */
+@media (max-width: 768px) {
+  .powerbiWrapper::before {
+    padding-top: 70%;
+  }
+}

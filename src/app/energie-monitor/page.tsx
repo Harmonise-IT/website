@@ -1,6 +1,5 @@
-// NO 'use client'
 import type { Metadata } from 'next'
-import styles from '@/app/contact/contact.module.scss'
+import styles from '@/app/energie-monitor/energie-monitor.module.scss'
 
 export const metadata: Metadata = {
     title: 'Harmonise IT | Energie Monitor',
@@ -28,11 +27,16 @@ export default function EnergieMonitorPage() {
 
                 <h2 style={{ marginTop: '3rem' }}>Live Overzicht Energieverbruik</h2>
 
-                <iframe title="Energie Monitor Live"
-                        width="1140"
-                        height="600"
+                <div className={styles.powerbiWrapper}>
+                    <iframe
+                        className={styles.powerbiFrame}
+                        title="Energie Monitor Live"
                         src="https://app.powerbi.com/view?r=eyJrIjoiZGU0MGYzYmMtNzE2Mi00NGM1LWIzOWYtOWI4ZDNlNDA5OTc5IiwidCI6ImU4NjM3Y2NkLTM0MDQtNDA5MS1hYjEzLTE4NzAxZTllMDk1MiIsImMiOjl9&pageName=98a6483d05abd0026e1a"
-                        frameBorder="0" allowFullScreen={true}></iframe>
+                        allowFullScreen
+                    />
+                </div>
+
+
             </div>
         </section>
     )
