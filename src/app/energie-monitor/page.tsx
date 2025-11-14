@@ -18,7 +18,8 @@ export default function EnergieMonitorPage() {
                     hun energieverbruik op basis van IoT-metingen. Bedrijven koppelen hun
                     <strong> energiemaatregelen</strong> (zoals isoleren, zonnepanelen of procesoptimalisatie)
                     aan hun eigen profiel. Onze monitor vergelijkt deze maatregelen met het
-                    daadwerkelijke verbruik en bepaalt automatisch of de maatregelen <strong>voldoende energiebesparing</strong> opleveren.
+                    daadwerkelijke verbruik en bepaalt automatisch of de maatregelen <strong>voldoende
+                    energiebesparing</strong> opleveren.
                     <br/><br/>
                     Wanneer het verbruik onverwacht stijgt of maatregelen onvoldoende effect hebben,
                     ontvangt de <strong>Omgevingsdienst</strong> automatisch een melding zodat zij gericht
@@ -27,14 +28,11 @@ export default function EnergieMonitorPage() {
 
                 <h2 style={{ marginTop: '3rem' }}>Live Overzicht Energieverbruik</h2>
 
-                <iframe
-                    title="Energie Monitor Live"
-                    width="1140"
-                    height="600"
-                    src="https://app.powerbi.com/reportEmbed?reportId=770a2c84-515b-4b59-a13a-c02b30b7772c&autoAuth=true&ctid=e8637ccd-3404-4091-ab13-18701e9e0952"
-                    frameBorder="0"
-                    allowFullScreen={true}>
-                </iframe>
+                <iframe title="Energie Monitor Live"
+                        width="1140"
+                        height="600"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiZGU0MGYzYmMtNzE2Mi00NGM1LWIzOWYtOWI4ZDNlNDA5OTc5IiwidCI6ImU4NjM3Y2NkLTM0MDQtNDA5MS1hYjEzLTE4NzAxZTllMDk1MiIsImMiOjl9&pageName=98a6483d05abd0026e1a"
+                        frameBorder="0" allowFullScreen={true}></iframe>
             </div>
         </section>
     )
