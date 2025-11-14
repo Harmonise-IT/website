@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function WieWijZijnPage() {
     return (
-        <section className="section" aria-label="Contact">
+        <section className="section" aria-label="WieWijZijn">
             <div className="container">
 
                 <h2 className={`${s.title} ${s.in}`}>Over <span className={s.accent}>Harmonise IT</span></h2>
