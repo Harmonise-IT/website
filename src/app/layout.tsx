@@ -10,7 +10,7 @@ import { Montserrat } from 'next/font/google'
 import Footer from '@/app/components/Footer'
 
 const SITE = 'https://harmonise.nl'
-const OG = `${SITE}/og-image.png`
+const OG = `${SITE}/og-image.jpg`
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE),
