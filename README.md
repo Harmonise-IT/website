@@ -1,3 +1,3 @@
-# Harmonise IT Website.
+# Harmonise Website.
 
 https://harmonise.nl
