@@ -295,7 +295,7 @@ export default function ContactClient() {
                     {/* INFO */}
                     <aside className={`${styles.innerCard} ${styles.infoCard}`}>
                         <p className={styles.pitch}>
-                            Wil je weten hoe Harmonise IT jouw organisatie kan helpen?
+                            Wil je weten hoe Harmonise jouw organisatie kan helpen?
                             Neem contact op voor een vrijblijvend gesprek.
                         </p>
 

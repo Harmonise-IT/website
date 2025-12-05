@@ -7,7 +7,7 @@ export default function Map() {
             <p>Je vindt ons in Amsterdam aan de Prinsengracht. Ben je in de buurt? Kom gerust langs, we ontmoeten je graag.</p>
             <div className={styles.map}>
                 <iframe
-                    title="Harmonise IT Locatie"
+                    title="Harmonise Locatie"
                     src="https://maps.google.com/maps?q=52.3679498,4.8821308&z=17&output=embed&scrollwheel=0"
                     style={{ pointerEvents: 'none' }}
                     loading="lazy"

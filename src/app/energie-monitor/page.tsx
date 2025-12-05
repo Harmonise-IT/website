@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import styles from '@/app/energie-monitor/energie-monitor.module.scss'
 
 export const metadata: Metadata = {
-    title: 'Harmonise IT | Energie Monitor',
+    title: 'Harmonise | Energie Monitor',
     description: 'Realtime inzicht in energieverbruik en effectiviteit van energiemaatregelen voor bedrijven.',
 }
 

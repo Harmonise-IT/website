@@ -82,7 +82,7 @@ export default function Features() {
                 </p>
 
                 <p>
-                    Harmonise IT vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale
+                    Harmonise vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale
                     oplossingen en techniek naar helder beleid. Zo brengen we technologie in harmonie met de maatschappij.
                 </p>
 

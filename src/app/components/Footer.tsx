@@ -25,7 +25,7 @@ const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
     {
         title: 'Wie wij zijn',
         links: [
-            { href: '/wie-wij-zijn', label: 'Over Harmonise IT' },
+            { href: '/wie-wij-zijn', label: 'Over Harmonise' },
             { href: '/wie-wij-zijn#onze-visie', label: 'Onze visie' },
             { href: '/wie-wij-zijn#locatie', label: 'Locatie' },
         ],
@@ -52,10 +52,10 @@ export default function Footer() {
                             src="/hit-logo-yellow-transparent.png"
                             width={64}
                             height={64}
-                            alt="Harmonise IT logo"
+                            alt="Harmonise logo"
                         />
                     </Link>
-                    <span>Harmonise IT</span>
+                    <span>Harmonise</span>
                 </div>
 
                 <div className={styles.grid}>
@@ -77,7 +77,7 @@ export default function Footer() {
             <div className={styles.bottom}>
                 <div className="container">
                     <div className={styles.bottomRow}>
-                        <div className={styles.copy}>© {new Date().getFullYear()} Harmonise IT</div>
+                        <div className={styles.copy}>© {new Date().getFullYear()} Harmonise</div>
                     </div>
                 </div>
             </div>

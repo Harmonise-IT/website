@@ -80,10 +80,10 @@ export default function Navbar() {
                             src="/hit-logo-yellow-transparent.png"
                             width={64}
                             height={64}
-                            alt="Harmonise IT logo"
+                            alt="Harmonise logo"
                             loading="eager"
                         />
-                        Harmonise IT
+                        Harmonise
                     </Link>
 
                     {/* Desktop links */}
@@ -178,7 +178,7 @@ function ResourcesMenu() {
     return (
         <div className={styles.menuGrid}>
             <Column title="" href="/wie-wij-zijn">
-                <Link href="/wie-wij-zijn">Over Harmonise IT</Link>
+                <Link href="/wie-wij-zijn">Over Harmonise</Link>
                 <Link href="/wie-wij-zijn#onze-visie">Onze visie</Link>
                 <Link href="/wie-wij-zijn#locatie">Locatie</Link>
             </Column>

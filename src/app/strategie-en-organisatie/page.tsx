@@ -3,7 +3,7 @@ import ContentBlock from '@/app/components/ContentBlock'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Harmonise IT | Strategie & organisatie',
+    title: 'Harmonise | Strategie & organisatie',
     description: 'Strategie & organisatie pagina.',
 }
 

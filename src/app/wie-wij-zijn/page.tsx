@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import VennDiagram from '@/app/components/VennDiagram'
 
 export const metadata: Metadata = {
-    title: 'Harmonise IT | Wie wij zijn',
+    title: 'Harmonise | Wie wij zijn',
     description: 'Wie wij zijn pagina.',
 }
 
@@ -14,10 +14,10 @@ export default function WieWijZijnPage() {
         <section className="section" aria-label="WieWijZijn">
             <div className="container">
 
-                <h2 className={`${s.title} ${s.in}`}>Over <span className={s.accent}>Harmonise IT</span></h2>
+                <h2 className={`${s.title} ${s.in}`}>Over <span className={s.accent}>Harmonise</span></h2>
 
                 <p>
-                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten. Harmonise IT vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie in harmonie met de maatschappij.
+                    Ontwikkelaars en beleidsmakers lijken soms uit verschillende werelden te komen. De een denkt in structuren en systemen, de ander beweegt mee met een veranderende omgeving vol nieuwe eisen. Wij begrijpen beide kanten. Harmonise vormt de schakel tussen technologie en beleid: wij vertalen beleid naar praktische digitale oplossingen en techniek naar helder beleid. Zo brengen we technologie in harmonie met de maatschappij.
                 </p>
 
                 <p>
@@ -31,7 +31,7 @@ export default function WieWijZijnPage() {
                     title="Onze"
                     accent="visie"
                     className="driePerspectieven"
-                    lead="Bij Harmonise IT geloven we dat duurzame digitale ontwikkeling ontstaat daar waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
+                    lead="Bij Harmonise geloven we dat duurzame digitale ontwikkeling ontstaat daar waar drie perspectieven elkaar raken: menselijk, beleidsmatig en technisch."
                     points={[
                         '<strong class="accentSecondary">Menselijk →</strong> Technologie is er voor mensen. Wij houden er rekening mee dat digitale oplossingen aansluiten bij de manier waarop mensen denken, samenwerken en beslissingen nemen. Dit geldt niet alleen voor de overheden die met deze oplossingen werken, maar ook voor burgers en bedrijven. Gebruiksvriendelijkheid, inclusiviteit en toegankelijkheid staan centraal.',
                         '<strong class="accentSecondary">Beleidsmatig →</strong> De overheid opereert in een omgeving die continu verandert. Beleid evolueert, regelgeving wordt aangescherpt, maatschappelijke verwachtingen verschuiven. Systemen moeten vanaf het begin adaptief worden ingericht om rekening te houden met deze ontwikkelingen. Daarbij houden we rekening met gezamenlijke open standaarden.',

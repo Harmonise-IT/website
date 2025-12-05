@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     metadataBase: new URL(SITE),
 
     title: {
-        default: 'Harmonise IT',
-        template: '%s | Harmonise IT',
+        default: 'Harmonise',
+        template: '%s',
     },
     description: 'Beleid en technologie in harmonie',
     alternates: { canonical: SITE },
@@ -25,16 +25,16 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         url: SITE,
-        siteName: 'Harmonise IT',
-        title: 'Harmonise IT',
+        siteName: 'Harmonise',
+        title: 'Harmonise',
         description: 'Beleid en technologie in harmonie',
         images: [
-            { url: OG, width: 1200, height: 630, alt: 'Harmonise IT' },
+            { url: OG, width: 1200, height: 630, alt: 'Harmonise' },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Harmonise IT',
+        title: 'Harmonise',
         description: 'Beleid en technologie in harmonie',
         images: [OG],
     },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
     appleWebApp: {
         capable: true,
-        title: 'Harmonise IT',
+        title: 'Harmonise',
         statusBarStyle: 'black-translucent',
     },
 }

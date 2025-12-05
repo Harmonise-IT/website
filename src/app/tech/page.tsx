@@ -4,7 +4,7 @@ import ContentBlock from '@/app/components/ContentBlock'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Harmonise IT | Tech',
+    title: 'Harmonise | Tech',
     description: 'Tech pagina.',
 }
 
